@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Heritage Quiz</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #f7f9fc, #e9edf3);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px 40px;
+      animation: fadeIn 0.6s ease;
+    }
+    h1 { text-align: center; color: #2a4d69; margin-bottom: 30px; }
+    input, button {
+      font-family: inherit;
+    }
+    /* Auth styles */
+    #authSection { text-align: center; }
+    #authSection input {
+      width: 70%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    #authSection button {
+      background: #2a4d69;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    #authSection button:hover { background: #1f3a52; }
+    /* Quiz styles */
+    .question { margin-bottom: 25px; background: #f7faff; padding: 15px; border-radius: 10px; }
+    .options label { display: block; padding: 8px 12px; margin: 5px 0; border-radius: 6px; background: #fff; border: 1px solid #ccc; cursor: pointer; }
+    .options input[type="radio"] { display: none; }
+    .options input[type="radio"]:checked + label { background: #2a4d69; color: #fff; border-color: #2a4d69; }
+    #submitBtn { display: block; margin: 20px auto; padding: 10px 25px; background: #2a4d69; color: white; border: none; border-radius: 8px; cursor: pointer; }
+    #submitBtn:hover { background: #1f3a52; }
+    /* Leaderboard */
+    .leaderboard { margin-top: 40px; background: #f9f9f9; border-radius: 12px; padding: 20px; box-shadow: inset 0 0 5px rgba(0,0,0,0.05); }
+    .leaderboard h2 { text-align: center; margin: 0 0 15px; }
+    .leaderboard ol { list-style: none; padding: 0; }
+    .leaderboard li { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #ddd; }
+    @keyframes fadeIn { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Indian Heritage Quiz</h1>
+
+    <!-- AUTH SECTION -->
+    <div id="authSection">
+      <h3 id="authTitle">Login or Sign Up</h3>
+      <input type="text" id="username" placeholder="Username" /><br />
+      <input type="password" id="password" placeholder="Password" /><br />
+      <button onclick="loginUser()">Login</button>
+      <button onclick="signupUser()">Sign Up</button>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div id="quizSection" style="display:none;">
+      <form id="quizForm"></form>
+      <button id="submitBtn">Submit Quiz</button>
+      <div class="leaderboard">
+        <h2>🏆 Leaderboard</h2>
+        <ol id="leaderboardList"><li>Loading...</li></ol>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentUser = JSON.parse(sessionStorage.getItem('currentUser')) || null;
+
+    const quizQuestions = [
+      { question: "Which festival is known as the 'Festival of Lights'?", options: ["Holi", "Diwali", "Dussehra", "Karva Chauth"], correct: 1 },
+      { question: "The Taj Mahal was built by which Mughal emperor?", options: ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"], correct: 2 },
+      { question: "Which state is famous for Kathakali dance?", options: ["Tamil Nadu", "Kerala", "Karnataka", "Andhra Pradesh"], correct: 1 },
+      { question: "The Red Fort is located in which city?", options: ["Mumbai", "Kolkata", "Delhi", "Jaipur"], correct: 2 },
+      { question: "Which art form uses only white paint on brown background?", options: ["Madhubani", "Warli", "Tanjore", "Phad"], correct: 1 },
+      { question: "Onam is the major festival of which state?", options: ["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh"], correct: 2 },
+      { question: "The Golden Temple is located in which city?", options: ["Delhi", "Amritsar", "Chandigarh", "Ludhiana"], correct: 1 },
+      { question: "Which dance form originated in Tamil Nadu?", options: ["Bharatanatyam", "Kathak", "Odissi", "Manipuri"], correct: 0 },
+      { question: "Ajanta and Ellora caves are located in which state?", options: ["Rajasthan", "Madhya Pradesh", "Maharashtra", "Gujarat"], correct: 2 },
+      { question: "Which festival involves flying colorful kites?", options: ["Diwali", "Holi", "Makar Sankranti", "Navratri"], correct: 2 }
+    ];
+
+    const quizForm = document.getElementById("quizForm");
+    const authSection = document.getElementById("authSection");
+    const quizSection = document.getElementById("quizSection");
+
+    function renderQuiz() {
+      quizForm.innerHTML = "";
+      quizQuestions.forEach((q, idx) => {
+        const div = document.createElement("div");
+        div.className = "question";
+        div.innerHTML = `
+          <h3>${idx + 1}. ${q.question}</h3>
+          <div class="options">
+            ${q.options.map((opt, i) => `
+              <input type="radio" id="q${idx}_opt${i}" name="question${idx}" value="${i}">
+              <label for="q${idx}_opt${i}">${opt}</label>
+            `).join("")}
+          </div>
+        `;
+        quizForm.appendChild(div);
+      });
+    }
+
+    // ---------- AUTH ----------
+ async function loginUser() {
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value;
+  const res = await fetch('/api/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password })
+  });
+  const data = await res.json();
+  if (data.ok) {
+    currentUser = data.user;
+    sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+    showQuiz();
+  } else {
+    alert('Login failed: ' + (data.error || 'Try again'));
+  }
+}
+
+async function signupUser() {
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value;
+  const res = await fetch('/api/auth/signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password, display_name: username })
+  });
+  const data = await res.json();
+  if (data.ok) {
+    currentUser = data.user;
+    sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+    showQuiz();
+  } else {
+    alert('Signup failed: ' + (data.error || 'Try again'));
+  }
+}
+
+
+
+    // async function signupUser() {
+    //   const username = document.getElementById('username').value.trim();
+    //   const password = document.getElementById('password').value;
+    //   const res = await fetch('/api/auth/signup', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ username, password, display_name: username })
+    //   });
+    //   const data = await res.json();
+    //   if (data.ok) {
+    //     // localStorage.setItem('currentUser', JSON.stringify(data.user));
+    //     showQuiz();
+    //   } else {
+    //     alert('Signup failed: ' + (data.error || 'Try again'));
+    //   }
+    // }
+
+    // ---------- QUIZ ----------
+    document.getElementById('submitBtn').addEventListener('click', async (e) => {
+      e.preventDefault();
+      let score = 0;
+      quizQuestions.forEach((q, idx) => {
+        const selected = document.querySelector(`input[name="question${idx}"]:checked`);
+        if (selected && parseInt(selected.value) === q.correct) score += 10;
+      });
+      alert(`You scored ${score} points!`);
+
+      const user = currentUser;
+      if (!user) return alert('Please log in first.');
+
+      await fetch('/api/quiz/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: user.id, score, quiz_name: 'heritage_quiz' })
+      });
+
+      loadLeaderboard();
+    });
+
+    // ---------- LEADERBOARD ----------
+    async function loadLeaderboard() {
+      const res = await fetch('/api/quiz/leaderboard?quiz_name=heritage_quiz&limit=10');
+      const data = await res.json();
+      const list = document.getElementById('leaderboardList');
+      list.innerHTML = '';
+      if (data.ok && data.leaderboard.length) {
+        data.leaderboard.forEach((row, i) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<span>#${i+1}. ${row.display_name || row.username}</span><span>${row.score} pts</span>`;
+          list.appendChild(li);
+        });
+      } else {
+        list.innerHTML = '<li>No scores yet.</li>';
+      }
+    }
+
+    // ---------- PAGE INIT ----------
+    function showQuiz() {
+      authSection.style.display = 'none';
+      quizSection.style.display = 'block';
+      renderQuiz();
+      loadLeaderboard();
+    }
+
+    // const user = JSON.parse(localStorage.getItem('currentUser'));
+    // if (user) showQuiz(); // auto-login if user exists
+  </script>
+</body>
+</html>

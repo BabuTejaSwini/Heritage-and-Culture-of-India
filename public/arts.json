@@ -1,0 +1,392 @@
+[
+  {
+    "id": "madhubani",
+    "title": "Madhubani Art",
+    "emoji": "🖌️",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Madhubani_Art.jpg",
+    "short": "Originating in Bihar, uses natural dyes and depicts folklore and deities in bold colors.",
+    "steps": [
+      "Prepare the surface (paper or cloth) with a coat of natural gesso or a light wash.",
+      "Draw outlines using a fine nib pen or twig dipped in ink, focusing on geometric and symbolic patterns.",
+      "Fill areas with bold natural pigments or acrylics.",
+      "Add fine detailing using intricate borders, flowers, animals, and patterns.",
+      "Allow to dry and optionally apply a protective varnish."
+    ],
+    "video": "https://www.youtube.com/watch?v=cm5KZtjFRac&list=PLfCXz1k9U7kmSR0zsZieirVIHA7SFMsI_https://www.youtube.com/watch?v=cm5KZtjFRac&list=PLfCXz1k9U7kmSR0zsZieirVIHA7SFMsI_"
+  },
+  {
+    "id": "warli",
+    "title": "Warli Art",
+    "emoji": "🌾",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Warli_Painting.jpg",
+    "short": "A tribal art form from Maharashtra using white motifs on earthen backgrounds to portray daily life.",
+    "steps": [
+      "Prepare a mud-brown background using soil and binder or brown paint.",
+      "Use simple shapes like circles, triangles, and squares to form figures.",
+      "Paint scenes of everyday life using white pigment made from rice paste.",
+      "Add repetitive patterns—trees, animals, huts—to fill the space.",
+      "Dry completely and frame or mount the artwork."
+    ],
+    "video": "https://www.youtube.com/watch?v=cGXvztdfOf4&list=PLqlRMgytSIo5BqCncxyE25659S_XKUjtY"
+  },
+  {
+    "id": "blue_pottery",
+    "title": "Jaipur Blue Pottery",
+    "emoji": "🪶",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Blue_pottery_jaipur.jpg",
+    "short": "Unique to Rajasthan; known for its smooth blue-glazed finish made from quartz and minerals.",
+    "steps": [
+      "Prepare the ceramic dough from quartz, fuller's earth, and adhesive materials.",
+      "Mold or press the pottery shape and let it semi-dry.",
+      "Apply a base white slip and sketch floral or geometric patterns.",
+      "Paint designs using cobalt blue and mineral pigments.",
+      "Glaze and fire at low temperature for the signature smooth finish."
+    ],
+    "video": "https://www.youtube.com/watch?v=XbDTf9kf5ac"
+  },
+  {
+    "id": "gond",
+    "title": "Gond Art",
+    "emoji": "🐾",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Gond_art_example.jpg",
+    "short": "A tribal art from Madhya Pradesh featuring animals, trees and nature using dots and lines.",
+    "steps": [
+      "Lightly sketch the main shapes—animals, trees, or natural elements.",
+      "Outline using black ink or paint.",
+      "Fill the interior using repeated dots, dashes, and line patterns.",
+      "Use contrasting bright colors to create texture and movement.",
+      "Add fine detailing and allow it to dry."
+    ],
+    "video": "https://youtu.be/L1H_Fj5CGlg?si=5eYtnBH-XCrqtPua"
+  },
+  {
+    "id": "kalamkari",
+    "title": "Kalamkari Art",
+    "emoji": "🖋️",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Kalamkari_example.jpg",
+    "short": "A pen-drawn textile art from Andhra Pradesh using natural dyes and mythological themes.",
+    "steps": [
+      "Prepare cotton fabric by washing and treating with natural mordants.",
+      "Use a bamboo 'kalam' (pen) to outline figures and borders.",
+      "Fill areas with natural dyes made from plants and minerals.",
+      "Add detailing with fine strokes and repeating motifs.",
+      "Wash and dry the cloth to fix the colors."
+    ],
+    "video": "https://youtu.be/Hv3MR-Ai0xQ?si=O3zjWf8WbSMDp0xo"
+  },
+  {
+    "id": "pattachitra",
+    "title": "Pattachitra",
+    "emoji": "🎨",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Pattachitra_example.jpg",
+    "short": "A traditional cloth-based scroll painting from Odisha known for bold lines and intricate borders.",
+    "steps": [
+      "Prepare cloth with chalk powder and gum to make a smooth surface.",
+      "Sketch mythological scenes with bold black outlines.",
+      "Fill with natural stone-based colors in flat tones.",
+      "Add intricate patterned borders around the main theme.",
+      "Polish with lacquer for protection."
+    ],
+    "video": "https://youtu.be/1czIzshqce8?si=WiXT66IuosZ6fQvG"
+  },
+  {
+    "id": "tanjore",
+    "title": "Tanjore Painting",
+    "emoji": "👑",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Thanjavur_painting.jpg",
+    "short": "A classical South Indian painting form featuring gold relief work and deity figures.",
+    "steps": [
+      "Prepare a wooden base with cloth and chalk paste.",
+      "Sketch deity figures and decorative borders.",
+      "Apply embossed areas using a paste of chalk and gum.",
+      "Fix gold foil over the embossed regions.",
+      "Paint remaining areas with rich colors and add detailing."
+    ],
+    "video": "https://youtube.com/shorts/FVJG4MSDoYM?si=mypjSoWg_xcSVHsb"
+  },
+  {
+    "id": "phad",
+    "title": "Phad Painting",
+    "emoji": "📜",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Phad_painting.jpg",
+    "short": "A long-scroll storytelling art form from Rajasthan depicting folk tales of Pabuji and Devnarayan.",
+    "steps": [
+      "Treat cloth with wheat flour paste and burnish for smoothness.",
+      "Sketch narrative scenes along the length of the scroll.",
+      "Paint flat areas using bright earthy colors.",
+      "Add expressive faces and fine line detailing.",
+      "Finish with borders and allow to dry fully."
+    ],
+    "video": "https://youtu.be/pTzV0evY4h0?si=j4OYGE0I_NFwRLZm"
+  },
+  {
+    "id": "cheriyal",
+    "title": "Cheriyal Scroll Painting",
+    "emoji": "🧵",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Cheriyal_scroll_painting.jpg",
+    "short": "A folk art from Telangana featuring bold, cartoon-like characters in storytelling scrolls.",
+    "steps": [
+      "Prepare a canvas using tamarind paste and chalk powder.",
+      "Sketch characters with bold outlines.",
+      "Fill with bright primary colors.",
+      "Add expressive facial features and ornamentation.",
+      "Frame sections with decorative borders."
+    ],
+    "video": "https://youtu.be/-xQ-DmsiOkY?si=tGF-HQtK3rqJO6aX"
+  },
+  {
+    "id": "miniature",
+    "title": "Indian Miniature Painting",
+    "emoji": "🐘",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Mughal_miniature_painting.jpg",
+    "short": "Highly detailed paintings from Mughal and Rajput courts featuring royal scenes and nature.",
+    "steps": [
+      "Prepare handmade paper or treated sheet.",
+      "Sketch extremely fine outlines with a thin brush.",
+      "Fill with mineral-based colors in layers.",
+      "Add micro-level ornamentation and background detailing.",
+      "Burnish with a smooth stone for sheen."
+    ],
+    "video": "https://youtu.be/KzTbYkp_FRg?si=lN8OohZFc0AZSQmA"
+  },
+  {
+    "id": "channapatna",
+    "title": "Channapatna Toys",
+    "emoji": "🧸",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Channapatna_Toys.jpg",
+    "short": "Eco-friendly wooden toys from Karnataka made using natural dyes and lacquer polishing.",
+    "steps": [
+      "Carve shapes from locally available softwood.",
+      "Mount wooden pieces on a lathe machine.",
+      "Shape using chisels and smooth the surface.",
+      "Apply natural dyes and lacquer for shine.",
+      "Assemble parts to complete the toy."
+    ],
+    "video": "https://youtu.be/7fp4wioTemo?si=Maev8BYnCuKp1NtG"
+  },
+  {
+    "id": "dhokra",
+    "title": "Dhokra Metal Casting",
+    "emoji": "🦌",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Dhokra_art.JPG",
+    "short": "A tribal metal craft using lost-wax casting to create rustic figurines and ornaments.",
+    "steps": [
+      "Shape the core model with clay.",
+      "Apply a wax layer and carve details into the wax.",
+      "Cover the model with clay and create drainage channels.",
+      "Melt the wax so metal can replace it.",
+      "Break the mold to reveal the final metal piece."
+    ],
+    "video": "https://youtu.be/x77TORn-zf0?si=I86mSlciIqN1dHfc"
+  },
+  {
+    "id": "bidri",
+    "title": "Bidriware",
+    "emoji": "⚫",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Bidriware.jpg",
+    "short": "A black metal craft from Karnataka with intricate silver inlay designs.",
+    "steps": [
+      "Cast the base object using zinc and copper alloy.",
+      "Polish the surface smooth for engraving.",
+      "Carve intricate patterns by hand.",
+      "Hammer thin silver wires into the grooves.",
+      "Apply a special soil paste to turn the surface deep black."
+    ],
+    "video": "https://youtu.be/863J8DM9QO0?si=BYrXztBIN8h8Dlz3"
+  },
+  {
+    "id": "kanchipuram",
+    "title": "Kanchipuram Silk Weaving",
+    "emoji": "🧵",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Kanchipuram_silk_saree.jpg",
+    "short": "Luxurious South Indian silk known for temple borders and gold zari weaving.",
+    "steps": [
+      "Dye raw silk threads in vibrant colors.",
+      "Warp and prepare the loom setup.",
+      "Hand-weave body, border, and pallu separately.",
+      "Integrate zari work for patterns.",
+      "Join sections using the korvai technique."
+    ],
+    "video": "https://youtu.be/8eAmbANFmoA?si=DdNRd8vD3EdlwFvO"
+  },
+  {
+    "id": "banarasi",
+    "title": "Banarasi Brocade Weaving",
+    "emoji": "✨",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Banarasi_silk_saree.jpg",
+    "short": "Rich brocade fabric from Varanasi with gold and silver zari floral motifs.",
+    "steps": [
+      "Prepare silk yarn through dyeing and drying.",
+      "Design motifs using traditional graph paper.",
+      "Set up the jacquard loom for weaving patterns.",
+      "Weave body fabric with zari threads.",
+      "Cut, finish, and polish the final saree."
+    ],
+    "video": "https://youtu.be/COxJUmf1udI?si=QCaUbIxc-vY0rW8O"
+  },
+  {
+    "id": "ikat",
+    "title": "Ikat Weaving",
+    "emoji": "🔶",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Ikat_fabric.jpg",
+    "short": "Tie-dye resist weaving technique where threads are dyed before weaving to form patterns.",
+    "steps": [
+      "Tie sections of yarn tightly to resist dye.",
+      "Dye the yarn in sequential colors.",
+      "Prepare warp and weft threads on the loom.",
+      "Align dyed threads to match the pattern.",
+      "Hand-weave the cloth with precision."
+    ],
+    "video": "https://youtu.be/onuKCW89I6o?si=Ll127lJ_YzoH8wQW"
+  },
+  {
+    "id": "kutch_embroidery",
+    "title": "Kutch Embroidery",
+    "emoji": "🧶",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Kutch_embroidery.jpg",
+    "short": "Colorful Gujarati embroidery featuring mirrors, bold stitches, and geometric motifs.",
+    "steps": [
+      "Select bright colored threads and fabric.",
+      "Sketch basic motifs using chalk.",
+      "Use interlaced and herringbone stitches for patterns.",
+      "Fix mirrors with special stitching techniques.",
+      "Embellish borders and finish edges."
+    ],
+    "video": "https://youtu.be/WGXIlkNxh0E?si=BmdRZjEWelcAeUIx"
+  },
+  {
+    "id": "terracotta",
+    "title": "Terracotta Craft",
+    "emoji": "🏺",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Bishnupur_Terracotta.jpg",
+    "short": "Clay-based craft used to make pots, figurines, and architectural panels.",
+    "steps": [
+      "Prepare clay by kneading until smooth.",
+      "Shape clay into figures or objects.",
+      "Carve decorative details before drying.",
+      "Sun-dry the pieces to remove moisture.",
+      "Fire in a kiln for strength and color."
+    ],
+    "video": "https://youtube.com/shorts/bzQVU5-fEvI?si=W6uwk6KtlG5eJjFE"
+  },
+  {
+    "id": "longpi",
+    "title": "Longpi Black Pottery",
+    "emoji": "⚫",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Longpi_black_pottery.jpg",
+    "short": "A unique Manipur pottery made without a potter’s wheel using black serpentinite stone.",
+    "steps": [
+      "Crush and mix serpentinite stone and clay.",
+      "Shape by hand or using molds.",
+      "Polish with leaves for shine.",
+      "Fire at high temperature for black finish.",
+      "Cool slowly to avoid cracks."
+    ],
+    "video": "https://youtu.be/K759rnMP2LU?si=juWOPlDUPW8_2Y-_"
+  },
+  {
+    "id": "thanjavur_dolls",
+    "title": "Thanjavur Dancing Dolls",
+    "emoji": "🪆",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Thanjavur_doll.jpg",
+    "short": "Traditional bobble-head dolls made from terracotta or papier-mâché.",
+    "steps": [
+      "Mold body parts using clay or papier mâché.",
+      "Assemble upper and lower sections separately.",
+      "Paint with bright colors and ornaments.",
+      "Attach weighted bases to enable wobbling.",
+      "Dry and varnish for protection."
+    ],
+    "video": "https://youtu.be/bLlQ9nFSiDU?si=69-_Xnrm08d2O6L8"
+  },
+  {
+    "id": "meenakari",
+    "title": "Meenakari Art",
+    "emoji": "💍",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Meenakari_art.jpg",
+    "short": "Colorful enamel art on metal surfaces, used heavily in Jaipur jewelry.",
+    "steps": [
+      "Clean and shape metal surfaces.",
+      "Engrave recessed areas for enamel.",
+      "Fill cavities with colored enamel powders.",
+      "Fire in a furnace to melt and fuse enamel.",
+      "Polish the final piece for shine."
+    ],
+    "video": "https://youtu.be/4nm4l8YXELU?si=UEjym0x1OyRviceQ"
+  },
+  {
+    "id": "kondapalli",
+    "title": "Kondapalli Wooden Toys",
+    "emoji": "🪅",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Kondapalli_bommalu.jpg",
+    "short": "Hand-carved toys from Andhra Pradesh using lightweight Tella Poniki wood.",
+    "steps": [
+      "Cut and shape lightweight softwood.",
+      "Carve body, limbs, and details.",
+      "Assemble pieces with natural adhesives.",
+      "Paint with bright vegetable colors.",
+      "Finish with lacquer coating."
+    ],
+    "video": "https://youtube.com/shorts/Vs0OHkkrK7o?si=YUHhWTIjFycoltlm"
+  },
+  {
+    "id": "sandalwood_carving",
+    "title": "Sandalwood Carving",
+    "emoji": "🌳",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Sandalwood_carving.jpg",
+    "short": "Exquisite carvings on fragrant sandalwood from Karnataka.",
+    "steps": [
+      "Select high-quality sandalwood blocks.",
+      "Sketch outlines directly onto the wood.",
+      "Carve using fine tools for details.",
+      "Polish and smooth all surfaces.",
+      "Apply natural oil for shine."
+    ],
+    "video": "https://youtu.be/LWuBRdy80Ks?si=wVZ7FaF4SlwPngCB"
+  },
+  {
+    "id": "rogan",
+    "title": "Rogan Art",
+    "emoji": "🌀",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rogan_art.jpg",
+    "short": "A rare Gujarati cloth art made using castor-oil-based thick paint drawn with threads.",
+    "steps": [
+      "Heat castor oil and natural pigments to form thick rogan paste.",
+      "Stretch cloth onto a surface.",
+      "Dip a metal stylus into the paste.",
+      "Draw patterns by stretching threads of rogan from the tool.",
+      "Add final flourishes and allow to dry."
+    ],
+    "video": "https://youtu.be/H3Den05Q_D0?si=rM_Uw5LS0yj0XawX"
+  },
+  {
+    "id": "applique",
+    "title": "Pipili Appliqué Work",
+    "emoji": "✂️",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Pipili_Applique_Work.jpg",
+    "short": "A decorative textile art from Odisha using cut fabric shapes stitched onto cloth.",
+    "steps": [
+      "Cut colorful fabric pieces into motifs.",
+      "Position pieces on a contrasting cloth base.",
+      "Stitch edges using decorative stitches.",
+      "Add mirrors, tassels, or borders.",
+      "Finish by backing and trimming edges."
+    ],
+    "video": "https://youtube.com/shorts/HhW9jeeZOGo?si=S5mWjk-8VhbiKAsC"
+  },
+  {
+    "id": "sanjhi",
+    "title": "Sanjhi Paper Cutting",
+    "emoji": "🪶",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Sanjhi_art.jpg",
+    "short": "A delicate paper-cutting art from Mathura inspired by Vaishnav temple designs.",
+    "steps": [
+      "Fold paper to ensure symmetrical cuts.",
+      "Draw intricate motifs—peacocks, lotus, Krishna scenes.",
+      "Cut using fine scissors or craft blades.",
+      "Flatten and mount onto colored backgrounds.",
+      "Frame or laminate for protection."
+    ],
+    "video": "https://youtu.be/A0KpIYWCHi0?si=gKg8AML1w5egtw92"
+  }
+]

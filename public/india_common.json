@@ -1,0 +1,1635 @@
+{
+  "fixed_holidays": {
+    "holidays": [
+      {
+        "name": "New Year",
+        "date": "2025-01-01",
+        "type": "Cultural",
+        "overview": "Celebration of the beginning of the Gregorian calendar year."
+      },
+      {
+        "name": "Republic Day",
+        "date": "2025-01-26",
+        "type": "National",
+        "overview": "Marks the adoption of the Indian Constitution in 1950."
+      },
+      {
+        "name": "Ambedkar Jayanti",
+        "date": "2025-04-14",
+        "type": "Commemorative",
+        "overview": "Celebrates the birth anniversary of Dr. B.R. Ambedkar, architect of the Indian Constitution."
+      },
+      {
+        "name": "Labour Day (May Day)",
+        "date": "2025-05-01",
+        "type": "Cultural",
+        "overview": "International Workers’ Day recognizing the labor movement and workers’ rights."
+      },
+      {
+        "name": "Independence Day",
+        "date": "2025-08-15",
+        "type": "National",
+        "overview": "Celebrates India’s independence from British rule in 1947."
+      },
+      {
+        "name": "Gandhi Jayanti",
+        "date": "2025-10-02",
+        "type": "National",
+        "overview": "Birth anniversary of Mahatma Gandhi, leader of India’s freedom movement."
+      },
+      {
+        "name": "Christmas",
+        "date": "2025-12-25",
+        "type": "Religious",
+        "overview": "Christian festival celebrating the birth of Jesus Christ."
+      }
+    ],
+    "non_holidays": [
+      {
+        "name": "Swami Vivekananda Jayanti (National Youth Day)",
+        "date": "2025-01-12",
+        "type": "National",
+        "overview": "Commemorates the birth anniversary of Swami Vivekananda, inspiring youth empowerment."
+      },
+      {
+        "name": "Army Day",
+        "date": "2025-01-15",
+        "type": "National",
+        "overview": "Honors the Indian Army’s service and dedication to the nation."
+      },
+      {
+        "name": "Teachers’ Day",
+        "date": "2025-09-05",
+        "type": "Commemorative",
+        "overview": "Honors Dr. Sarvepalli Radhakrishnan and the contributions of teachers."
+      },
+      {
+        "name": "Engineer’s Day",
+        "date": "2025-09-15",
+        "type": "Commemorative",
+        "overview": "Marks the birth anniversary of Sir M. Visvesvaraya, a pioneer engineer."
+      },
+      {
+        "name": "Children’s Day",
+        "date": "2025-11-14",
+        "type": "Commemorative",
+        "overview": "Celebrates the birth anniversary of Jawaharlal Nehru, India’s first Prime Minister."
+      },
+      {
+        "name": "Navy Day",
+        "date": "2025-12-04",
+        "type": "National",
+        "overview": "Honors the achievements and role of the Indian Navy."
+      }
+    ]
+  },
+  "movable_festivals": [
+    {
+      "name": "Diwali (Deepavali)",
+      "type": "Religious",
+      "overview": "Hindu festival of lights celebrating the victory of light over darkness and good over evil.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-11-11"
+        },
+        {
+          "year": 2016,
+          "date": "2016-10-30"
+        },
+        {
+          "year": 2017,
+          "date": "2017-10-19"
+        },
+        {
+          "year": 2018,
+          "date": "2018-11-07"
+        },
+        {
+          "year": 2019,
+          "date": "2019-10-27"
+        },
+        {
+          "year": 2020,
+          "date": "2020-11-14"
+        },
+        {
+          "year": 2021,
+          "date": "2021-11-04"
+        },
+        {
+          "year": 2022,
+          "date": "2022-10-24"
+        },
+        {
+          "year": 2023,
+          "date": "2023-11-12"
+        },
+        {
+          "year": 2024,
+          "date": "2024-11-01"
+        },
+        {
+          "year": 2025,
+          "date": "2025-10-20"
+        },
+        {
+          "year": 2026,
+          "date": "2026-11-08"
+        },
+        {
+          "year": 2027,
+          "date": "2027-10-29"
+        },
+        {
+          "year": 2028,
+          "date": "2028-10-17"
+        },
+        {
+          "year": 2029,
+          "date": "2029-11-05"
+        },
+        {
+          "year": 2030,
+          "date": "2030-10-24"
+        },
+        {
+          "year": 2031,
+          "date": "2031-11-14"
+        },
+        {
+          "year": 2032,
+          "date": "2032-11-02"
+        },
+        {
+          "year": 2033,
+          "date": "2033-10-22"
+        },
+        {
+          "year": 2034,
+          "date": "2034-11-10"
+        },
+        {
+          "year": 2035,
+          "date": "2035-10-30"
+        }
+      ]
+    },
+    {
+      "name": "Holi",
+      "type": "Religious",
+      "overview": "Festival of colors marking the arrival of spring and the triumph of good over evil.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-03-06"
+        },
+        {
+          "year": 2016,
+          "date": "2016-03-24"
+        },
+        {
+          "year": 2017,
+          "date": "2017-03-13"
+        },
+        {
+          "year": 2018,
+          "date": "2018-03-02"
+        },
+        {
+          "year": 2019,
+          "date": "2019-03-21"
+        },
+        {
+          "year": 2020,
+          "date": "2020-03-10"
+        },
+        {
+          "year": 2021,
+          "date": "2021-03-29"
+        },
+        {
+          "year": 2022,
+          "date": "2022-03-18"
+        },
+        {
+          "year": 2023,
+          "date": "2023-03-08"
+        },
+        {
+          "year": 2024,
+          "date": "2024-03-25"
+        },
+        {
+          "year": 2025,
+          "date": "2025-03-14"
+        },
+        {
+          "year": 2026,
+          "date": "2026-03-04"
+        },
+        {
+          "year": 2027,
+          "date": "2027-03-23"
+        },
+        {
+          "year": 2028,
+          "date": "2028-03-12"
+        },
+        {
+          "year": 2029,
+          "date": "2029-03-01"
+        },
+        {
+          "year": 2030,
+          "date": "2030-03-20"
+        },
+        {
+          "year": 2031,
+          "date": "2031-03-09"
+        },
+        {
+          "year": 2032,
+          "date": "2032-02-27"
+        },
+        {
+          "year": 2033,
+          "date": "2033-03-17"
+        },
+        {
+          "year": 2034,
+          "date": "2034-03-06"
+        },
+        {
+          "year": 2035,
+          "date": "2035-03-24"
+        }
+      ]
+    },
+    {
+      "name": "Maha Shivaratri",
+      "type": "Religious",
+      "overview": "Dedicated to Lord Shiva with night-long prayers, fasting, and meditation.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-02-17"
+        },
+        {
+          "year": 2016,
+          "date": "2016-03-07"
+        },
+        {
+          "year": 2017,
+          "date": "2017-02-24"
+        },
+        {
+          "year": 2018,
+          "date": "2018-02-13"
+        },
+        {
+          "year": 2019,
+          "date": "2019-03-05"
+        },
+        {
+          "year": 2020,
+          "date": "2020-02-21"
+        },
+        {
+          "year": 2021,
+          "date": "2021-03-11"
+        },
+        {
+          "year": 2022,
+          "date": "2022-02-28"
+        },
+        {
+          "year": 2023,
+          "date": "2023-02-18"
+        },
+        {
+          "year": 2024,
+          "date": "2024-03-08"
+        },
+        {
+          "year": 2025,
+          "date": "2025-02-25"
+        },
+        {
+          "year": 2026,
+          "date": "2026-03-15"
+        },
+        {
+          "year": 2027,
+          "date": "2027-03-04"
+        },
+        {
+          "year": 2028,
+          "date": "2028-02-22"
+        },
+        {
+          "year": 2029,
+          "date": "2029-02-12"
+        },
+        {
+          "year": 2030,
+          "date": "2030-03-03"
+        },
+        {
+          "year": 2031,
+          "date": "2031-02-20"
+        },
+        {
+          "year": 2032,
+          "date": "2032-03-09"
+        },
+        {
+          "year": 2033,
+          "date": "2033-02-28"
+        },
+        {
+          "year": 2034,
+          "date": "2034-02-17"
+        },
+        {
+          "year": 2035,
+          "date": "2035-03-07"
+        }
+      ]
+    },
+    {
+      "name": "Eid-ul-Fitr",
+      "type": "Religious",
+      "overview": "Islamic festival marking the end of Ramadan fasting with prayers and feasts.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-07-17"
+        },
+        {
+          "year": 2016,
+          "date": "2016-07-06"
+        },
+        {
+          "year": 2017,
+          "date": "2017-06-25"
+        },
+        {
+          "year": 2018,
+          "date": "2018-06-15"
+        },
+        {
+          "year": 2019,
+          "date": "2019-06-05"
+        },
+        {
+          "year": 2020,
+          "date": "2020-05-24"
+        },
+        {
+          "year": 2021,
+          "date": "2021-05-13"
+        },
+        {
+          "year": 2022,
+          "date": "2022-05-03"
+        },
+        {
+          "year": 2023,
+          "date": "2023-04-22"
+        },
+        {
+          "year": 2024,
+          "date": "2024-04-10"
+        },
+        {
+          "year": 2025,
+          "date": "2025-03-31"
+        },
+        {
+          "year": 2026,
+          "date": "2026-03-20"
+        },
+        {
+          "year": 2027,
+          "date": "2027-03-09"
+        },
+        {
+          "year": 2028,
+          "date": "2028-02-27"
+        },
+        {
+          "year": 2029,
+          "date": "2029-02-16"
+        },
+        {
+          "year": 2030,
+          "date": "2030-02-05"
+        },
+        {
+          "year": 2031,
+          "date": "2031-01-25"
+        },
+        {
+          "year": 2032,
+          "date": "2032-02-13"
+        },
+        {
+          "year": 2033,
+          "date": "2033-02-02"
+        },
+        {
+          "year": 2034,
+          "date": "2034-01-22"
+        },
+        {
+          "year": 2035,
+          "date": "2035-12-02"
+        }
+      ]
+    },
+    {
+      "name": "Navratri / Durga Puja",
+      "type": "Religious",
+      "overview": "Nine nights dedicated to Goddess Durga with fasting, prayers, and cultural celebrations.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-10-13"
+        },
+        {
+          "year": 2016,
+          "date": "2016-10-01"
+        },
+        {
+          "year": 2017,
+          "date": "2017-10-20"
+        },
+        {
+          "year": 2018,
+          "date": "2018-10-10"
+        },
+        {
+          "year": 2019,
+          "date": "2019-10-29"
+        },
+        {
+          "year": 2020,
+          "date": "2020-10-17"
+        },
+        {
+          "year": 2021,
+          "date": "2021-10-07"
+        },
+        {
+          "year": 2022,
+          "date": "2022-09-26"
+        },
+        {
+          "year": 2023,
+          "date": "2023-10-15"
+        },
+        {
+          "year": 2024,
+          "date": "2024-10-03"
+        },
+        {
+          "year": 2025,
+          "date": "2025-10-23"
+        },
+        {
+          "year": 2026,
+          "date": "2026-10-12"
+        },
+        {
+          "year": 2027,
+          "date": "2027-10-01"
+        },
+        {
+          "year": 2028,
+          "date": "2028-10-20"
+        },
+        {
+          "year": 2029,
+          "date": "2029-10-09"
+        },
+        {
+          "year": 2030,
+          "date": "2030-09-28"
+        },
+        {
+          "year": 2031,
+          "date": "2031-10-17"
+        },
+        {
+          "year": 2032,
+          "date": "2032-10-06"
+        },
+        {
+          "year": 2033,
+          "date": "2033-10-25"
+        },
+        {
+          "year": 2034,
+          "date": "2034-10-14"
+        },
+        {
+          "year": 2035,
+          "date": "2035-10-03"
+        }
+      ]
+    },
+    {
+      "name": "Dussehra (Vijayadashami)",
+      "type": "Religious",
+      "overview": "Marks the victory of Lord Rama over Ravana and the triumph of good over evil.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-10-22"
+        },
+        {
+          "year": 2016,
+          "date": "2016-10-11"
+        },
+        {
+          "year": 2017,
+          "date": "2017-10-30"
+        },
+        {
+          "year": 2018,
+          "date": "2018-10-19"
+        },
+        {
+          "year": 2019,
+          "date": "2019-10-08"
+        },
+        {
+          "year": 2020,
+          "date": "2020-10-25"
+        },
+        {
+          "year": 2021,
+          "date": "2021-10-15"
+        },
+        {
+          "year": 2022,
+          "date": "2022-10-05"
+        },
+        {
+          "year": 2023,
+          "date": "2023-10-24"
+        },
+        {
+          "year": 2024,
+          "date": "2024-10-12"
+        },
+        {
+          "year": 2025,
+          "date": "2025-10-02"
+        },
+        {
+          "year": 2026,
+          "date": "2026-10-21"
+        },
+        {
+          "year": 2027,
+          "date": "2027-10-10"
+        },
+        {
+          "year": 2028,
+          "date": "2028-10-29"
+        },
+        {
+          "year": 2029,
+          "date": "2029-10-18"
+        },
+        {
+          "year": 2030,
+          "date": "2030-10-07"
+        },
+        {
+          "year": 2031,
+          "date": "2031-10-26"
+        },
+        {
+          "year": 2032,
+          "date": "2032-10-15"
+        },
+        {
+          "year": 2033,
+          "date": "2033-11-03"
+        },
+        {
+          "year": 2034,
+          "date": "2034-10-23"
+        },
+        {
+          "year": 2035,
+          "date": "2035-10-12"
+        }
+      ]
+    },
+    {
+      "name": "Raksha Bandhan",
+      "type": "Religious",
+      "overview": "Celebrates the bond of love and protection between brothers and sisters.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-08-29"
+        },
+        {
+          "year": 2016,
+          "date": "2016-08-18"
+        },
+        {
+          "year": 2017,
+          "date": "2017-08-07"
+        },
+        {
+          "year": 2018,
+          "date": "2018-08-26"
+        },
+        {
+          "year": 2019,
+          "date": "2019-08-15"
+        },
+        {
+          "year": 2020,
+          "date": "2020-08-03"
+        },
+        {
+          "year": 2021,
+          "date": "2021-08-22"
+        },
+        {
+          "year": 2022,
+          "date": "2022-08-11"
+        },
+        {
+          "year": 2023,
+          "date": "2023-08-30"
+        },
+        {
+          "year": 2024,
+          "date": "2024-08-18"
+        },
+        {
+          "year": 2025,
+          "date": "2025-08-07"
+        },
+        {
+          "year": 2026,
+          "date": "2026-08-26"
+        },
+        {
+          "year": 2027,
+          "date": "2027-08-16"
+        },
+        {
+          "year": 2028,
+          "date": "2028-08-05"
+        },
+        {
+          "year": 2029,
+          "date": "2029-08-24"
+        },
+        {
+          "year": 2030,
+          "date": "2030-08-13"
+        },
+        {
+          "year": 2031,
+          "date": "2031-08-03"
+        },
+        {
+          "year": 2032,
+          "date": "2032-08-22"
+        },
+        {
+          "year": 2033,
+          "date": "2033-08-12"
+        },
+        {
+          "year": 2034,
+          "date": "2034-08-31"
+        },
+        {
+          "year": 2035,
+          "date": "2035-08-20"
+        }
+      ]
+    },
+    {
+      "name": "Janmashtami",
+      "type": "Religious",
+      "overview": "Commemorates the birth of Lord Krishna with fasting, devotional songs, and celebrations.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-08-25"
+        },
+        {
+          "year": 2016,
+          "date": "2016-08-25"
+        },
+        {
+          "year": 2017,
+          "date": "2017-09-04"
+        },
+        {
+          "year": 2018,
+          "date": "2018-08-26"
+        },
+        {
+          "year": 2019,
+          "date": "2019-08-24"
+        },
+        {
+          "year": 2020,
+          "date": "2020-08-11"
+        },
+        {
+          "year": 2021,
+          "date": "2021-08-30"
+        },
+        {
+          "year": 2022,
+          "date": "2022-08-18"
+        },
+        {
+          "year": 2023,
+          "date": "2023-09-06"
+        },
+        {
+          "year": 2024,
+          "date": "2024-08-26"
+        },
+        {
+          "year": 2025,
+          "date": "2025-08-18"
+        },
+        {
+          "year": 2026,
+          "date": "2026-08-07"
+        },
+        {
+          "year": 2027,
+          "date": "2027-08-27"
+        },
+        {
+          "year": 2028,
+          "date": "2028-08-15"
+        },
+        {
+          "year": 2029,
+          "date": "2029-09-03"
+        },
+        {
+          "year": 2030,
+          "date": "2030-08-23"
+        },
+        {
+          "year": 2031,
+          "date": "2031-08-13"
+        },
+        {
+          "year": 2032,
+          "date": "2032-09-01"
+        },
+        {
+          "year": 2033,
+          "date": "2033-08-20"
+        },
+        {
+          "year": 2034,
+          "date": "2034-08-09"
+        },
+        {
+          "year": 2035,
+          "date": "2035-08-29"
+        }
+      ]
+    },
+    {
+      "name": "Ganesh Chaturthi",
+      "type": "Religious",
+      "overview": "Celebrates the birth of Lord Ganesha with prayers, processions, and idol immersions.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-09-17"
+        },
+        {
+          "year": 2016,
+          "date": "2016-09-05"
+        },
+        {
+          "year": 2017,
+          "date": "2017-08-25"
+        },
+        {
+          "year": 2018,
+          "date": "2018-09-13"
+        },
+        {
+          "year": 2019,
+          "date": "2019-09-02"
+        },
+        {
+          "year": 2020,
+          "date": "2020-08-22"
+        },
+        {
+          "year": 2021,
+          "date": "2021-09-10"
+        },
+        {
+          "year": 2022,
+          "date": "2022-09-01"
+        },
+        {
+          "year": 2023,
+          "date": "2023-09-19"
+        },
+        {
+          "year": 2024,
+          "date": "2024-09-07"
+        },
+        {
+          "year": 2025,
+          "date": "2025-08-28"
+        },
+        {
+          "year": 2026,
+          "date": "2026-09-15"
+        },
+        {
+          "year": 2027,
+          "date": "2027-09-05"
+        },
+        {
+          "year": 2028,
+          "date": "2028-08-25"
+        },
+        {
+          "year": 2029,
+          "date": "2029-09-13"
+        },
+        {
+          "year": 2030,
+          "date": "2030-09-02"
+        },
+        {
+          "year": 2031,
+          "date": "2031-09-21"
+        },
+        {
+          "year": 2032,
+          "date": "2032-09-09"
+        },
+        {
+          "year": 2033,
+          "date": "2033-08-30"
+        },
+        {
+          "year": 2034,
+          "date": "2034-09-18"
+        },
+        {
+          "year": 2035,
+          "date": "2035-09-07"
+        }
+      ]
+    },
+    {
+      "name": "Karva Chauth",
+      "type": "Religious",
+      "overview": "Married women fast and pray for the long life and prosperity of their husbands.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-10-17"
+        },
+        {
+          "year": 2016,
+          "date": "2016-10-06"
+        },
+        {
+          "year": 2017,
+          "date": "2017-10-26"
+        },
+        {
+          "year": 2018,
+          "date": "2018-10-16"
+        },
+        {
+          "year": 2019,
+          "date": "2019-10-06"
+        },
+        {
+          "year": 2020,
+          "date": "2020-11-04"
+        },
+        {
+          "year": 2021,
+          "date": "2021-10-24"
+        },
+        {
+          "year": 2022,
+          "date": "2022-10-13"
+        },
+        {
+          "year": 2023,
+          "date": "2023-11-01"
+        },
+        {
+          "year": 2024,
+          "date": "2024-10-20"
+        },
+        {
+          "year": 2025,
+          "date": "2025-10-09"
+        },
+        {
+          "year": 2026,
+          "date": "2026-09-29"
+        },
+        {
+          "year": 2027,
+          "date": "2027-10-18"
+        },
+        {
+          "year": 2028,
+          "date": "2028-10-07"
+        },
+        {
+          "year": 2029,
+          "date": "2029-10-26"
+        },
+        {
+          "year": 2030,
+          "date": "2030-10-15"
+        },
+        {
+          "year": 2031,
+          "date": "2031-11-03"
+        },
+        {
+          "year": 2032,
+          "date": "2032-10-22"
+        },
+        {
+          "year": 2033,
+          "date": "2033-10-12"
+        },
+        {
+          "year": 2034,
+          "date": "2034-10-31"
+        },
+        {
+          "year": 2035,
+          "date": "2035-10-20"
+        }
+      ]
+    },
+    {
+      "name": "Onam",
+      "type": "Regional / Religious",
+      "overview": "Major harvest festival of Kerala celebrated with boat races, feasts, and cultural events.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-08-28"
+        },
+        {
+          "year": 2016,
+          "date": "2016-09-12"
+        },
+        {
+          "year": 2017,
+          "date": "2017-09-01"
+        },
+        {
+          "year": 2018,
+          "date": "2018-08-25"
+        },
+        {
+          "year": 2019,
+          "date": "2019-08-11"
+        },
+        {
+          "year": 2020,
+          "date": "2020-08-31"
+        },
+        {
+          "year": 2021,
+          "date": "2021-08-21"
+        },
+        {
+          "year": 2022,
+          "date": "2022-08-11"
+        },
+        {
+          "year": 2023,
+          "date": "2023-08-29"
+        },
+        {
+          "year": 2024,
+          "date": "2024-08-17"
+        },
+        {
+          "year": 2025,
+          "date": "2025-08-06"
+        },
+        {
+          "year": 2026,
+          "date": "2026-08-25"
+        },
+        {
+          "year": 2027,
+          "date": "2027-08-14"
+        },
+        {
+          "year": 2028,
+          "date": "2028-09-01"
+        },
+        {
+          "year": 2029,
+          "date": "2029-08-21"
+        },
+        {
+          "year": 2030,
+          "date": "2030-08-11"
+        },
+        {
+          "year": 2031,
+          "date": "2031-08-31"
+        },
+        {
+          "year": 2032,
+          "date": "2032-08-19"
+        },
+        {
+          "year": 2033,
+          "date": "2033-09-07"
+        },
+        {
+          "year": 2034,
+          "date": "2034-08-26"
+        },
+        {
+          "year": 2035,
+          "date": "2035-08-16"
+        }
+      ]
+    },
+    {
+      "name": "Pongal / Sankranti (semi-fixed)",
+      "type": "Cultural / Harvest",
+      "overview": "Harvest festival primarily celebrated in Tamil Nadu; usually Jan 14/15.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-01-15"
+        },
+        {
+          "year": 2016,
+          "date": "2016-01-15"
+        },
+        {
+          "year": 2017,
+          "date": "2017-01-15"
+        },
+        {
+          "year": 2018,
+          "date": "2018-01-15"
+        },
+        {
+          "year": 2019,
+          "date": "2019-01-15"
+        },
+        {
+          "year": 2020,
+          "date": "2020-01-15"
+        },
+        {
+          "year": 2021,
+          "date": "2021-01-14"
+        },
+        {
+          "year": 2022,
+          "date": "2022-01-15"
+        },
+        {
+          "year": 2023,
+          "date": "2023-01-15"
+        },
+        {
+          "year": 2024,
+          "date": "2024-01-15"
+        },
+        {
+          "year": 2025,
+          "date": "2025-01-15"
+        },
+        {
+          "year": 2026,
+          "date": "2026-01-15"
+        },
+        {
+          "year": 2027,
+          "date": "2027-01-15"
+        },
+        {
+          "year": 2028,
+          "date": "2028-01-15"
+        },
+        {
+          "year": 2029,
+          "date": "2029-01-15"
+        },
+        {
+          "year": 2030,
+          "date": "2030-01-15"
+        },
+        {
+          "year": 2031,
+          "date": "2031-01-15"
+        },
+        {
+          "year": 2032,
+          "date": "2032-01-14"
+        },
+        {
+          "year": 2033,
+          "date": "2033-01-15"
+        },
+        {
+          "year": 2034,
+          "date": "2034-01-15"
+        },
+        {
+          "year": 2035,
+          "date": "2035-01-15"
+        }
+      ]
+    },
+    {
+      "name": "Eid-ul-Adha (Bakrid)",
+      "type": "Religious",
+      "overview": "Festival of sacrifice honoring the willingness of Ibrahim to sacrifice his son for God.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-09-24"
+        },
+        {
+          "year": 2016,
+          "date": "2016-09-12"
+        },
+        {
+          "year": 2017,
+          "date": "2017-09-01"
+        },
+        {
+          "year": 2018,
+          "date": "2018-08-22"
+        },
+        {
+          "year": 2019,
+          "date": "2019-08-11"
+        },
+        {
+          "year": 2020,
+          "date": "2020-07-31"
+        },
+        {
+          "year": 2021,
+          "date": "2021-07-20"
+        },
+        {
+          "year": 2022,
+          "date": "2022-07-10"
+        },
+        {
+          "year": 2023,
+          "date": "2023-06-28"
+        },
+        {
+          "year": 2024,
+          "date": "2024-06-16"
+        },
+        {
+          "year": 2025,
+          "date": "2025-06-06"
+        },
+        {
+          "year": 2026,
+          "date": "2026-05-26"
+        },
+        {
+          "year": 2027,
+          "date": "2027-05-15"
+        },
+        {
+          "year": 2028,
+          "date": "2028-05-03"
+        },
+        {
+          "year": 2029,
+          "date": "2029-04-22"
+        },
+        {
+          "year": 2030,
+          "date": "2030-04-12"
+        },
+        {
+          "year": 2031,
+          "date": "2031-04-01"
+        },
+        {
+          "year": 2032,
+          "date": "2032-03-21"
+        },
+        {
+          "year": 2033,
+          "date": "2033-03-11"
+        },
+        {
+          "year": 2034,
+          "date": "2034-03-01"
+        },
+        {
+          "year": 2035,
+          "date": "2035-02-18"
+        }
+      ]
+    },
+    {
+      "name": "Muharram / Ashura",
+      "type": "Religious",
+      "overview": "Observed as a day of mourning to commemorate the martyrdom of Imam Hussain.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-10-23"
+        },
+        {
+          "year": 2016,
+          "date": "2016-10-12"
+        },
+        {
+          "year": 2017,
+          "date": "2017-10-01"
+        },
+        {
+          "year": 2018,
+          "date": "2018-09-21"
+        },
+        {
+          "year": 2019,
+          "date": "2019-09-11"
+        },
+        {
+          "year": 2020,
+          "date": "2020-08-30"
+        },
+        {
+          "year": 2021,
+          "date": "2021-08-20"
+        },
+        {
+          "year": 2022,
+          "date": "2022-08-09"
+        },
+        {
+          "year": 2023,
+          "date": "2023-07-29"
+        },
+        {
+          "year": 2024,
+          "date": "2024-07-17"
+        },
+        {
+          "year": 2025,
+          "date": "2025-07-07"
+        },
+        {
+          "year": 2026,
+          "date": "2026-06-26"
+        },
+        {
+          "year": 2027,
+          "date": "2027-06-16"
+        },
+        {
+          "year": 2028,
+          "date": "2028-06-04"
+        },
+        {
+          "year": 2029,
+          "date": "2029-05-24"
+        },
+        {
+          "year": 2030,
+          "date": "2030-05-13"
+        },
+        {
+          "year": 2031,
+          "date": "2031-05-03"
+        },
+        {
+          "year": 2032,
+          "date": "2032-04-22"
+        },
+        {
+          "year": 2033,
+          "date": "2033-04-11"
+        },
+        {
+          "year": 2034,
+          "date": "2034-04-01"
+        },
+        {
+          "year": 2035,
+          "date": "2035-03-21"
+        }
+      ]
+    },
+    {
+      "name": "Milad-un-Nabi (Mawlid)",
+      "type": "Religious",
+      "overview": "Marks the birth anniversary of Prophet Muhammad.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-12-24"
+        },
+        {
+          "year": 2016,
+          "date": "2016-12-12"
+        },
+        {
+          "year": 2017,
+          "date": "2017-12-01"
+        },
+        {
+          "year": 2018,
+          "date": "2018-11-21"
+        },
+        {
+          "year": 2019,
+          "date": "2019-11-10"
+        },
+        {
+          "year": 2020,
+          "date": "2020-10-29"
+        },
+        {
+          "year": 2021,
+          "date": "2021-10-19"
+        },
+        {
+          "year": 2022,
+          "date": "2022-10-08"
+        },
+        {
+          "year": 2023,
+          "date": "2023-09-27"
+        },
+        {
+          "year": 2024,
+          "date": "2024-09-15"
+        },
+        {
+          "year": 2025,
+          "date": "2025-09-04"
+        },
+        {
+          "year": 2026,
+          "date": "2026-08-24"
+        },
+        {
+          "year": 2027,
+          "date": "2027-08-13"
+        },
+        {
+          "year": 2028,
+          "date": "2028-08-01"
+        },
+        {
+          "year": 2029,
+          "date": "2029-07-21"
+        },
+        {
+          "year": 2030,
+          "date": "2030-07-11"
+        },
+        {
+          "year": 2031,
+          "date": "2031-06-30"
+        },
+        {
+          "year": 2032,
+          "date": "2032-06-19"
+        },
+        {
+          "year": 2033,
+          "date": "2033-06-09"
+        },
+        {
+          "year": 2034,
+          "date": "2034-05-29"
+        },
+        {
+          "year": 2035,
+          "date": "2035-05-19"
+        }
+      ]
+    },
+    {
+      "name": "Good Friday",
+      "type": "Religious",
+      "overview": "Christian observance of the crucifixion of Jesus Christ.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-04-03"
+        },
+        {
+          "year": 2016,
+          "date": "2016-03-25"
+        },
+        {
+          "year": 2017,
+          "date": "2017-04-14"
+        },
+        {
+          "year": 2018,
+          "date": "2018-03-30"
+        },
+        {
+          "year": 2019,
+          "date": "2019-04-19"
+        },
+        {
+          "year": 2020,
+          "date": "2020-04-10"
+        },
+        {
+          "year": 2021,
+          "date": "2021-04-02"
+        },
+        {
+          "year": 2022,
+          "date": "2022-04-15"
+        },
+        {
+          "year": 2023,
+          "date": "2023-04-07"
+        },
+        {
+          "year": 2024,
+          "date": "2024-03-29"
+        },
+        {
+          "year": 2025,
+          "date": "2025-04-18"
+        },
+        {
+          "year": 2026,
+          "date": "2026-04-03"
+        },
+        {
+          "year": 2027,
+          "date": "2027-03-26"
+        },
+        {
+          "year": 2028,
+          "date": "2028-04-14"
+        },
+        {
+          "year": 2029,
+          "date": "2029-03-30"
+        },
+        {
+          "year": 2030,
+          "date": "2030-04-19"
+        },
+        {
+          "year": 2031,
+          "date": "2031-04-11"
+        },
+        {
+          "year": 2032,
+          "date": "2032-03-26"
+        },
+        {
+          "year": 2033,
+          "date": "2033-04-15"
+        },
+        {
+          "year": 2034,
+          "date": "2034-04-07"
+        },
+        {
+          "year": 2035,
+          "date": "2035-03-29"
+        }
+      ]
+    },
+    {
+      "name": "Easter",
+      "type": "Religious",
+      "overview": "Christian festival celebrating the resurrection of Jesus Christ.",
+      "dates": [
+        {
+          "year": 2015,
+          "date": "2015-04-05"
+        },
+        {
+          "year": 2016,
+          "date": "2016-03-27"
+        },
+        {
+          "year": 2017,
+          "date": "2017-04-16"
+        },
+        {
+          "year": 2018,
+          "date": "2018-04-01"
+        },
+        {
+          "year": 2019,
+          "date": "2019-04-21"
+        },
+        {
+          "year": 2020,
+          "date": "2020-04-12"
+        },
+        {
+          "year": 2021,
+          "date": "2021-04-04"
+        },
+        {
+          "year": 2022,
+          "date": "2022-04-17"
+        },
+        {
+          "year": 2023,
+          "date": "2023-04-09"
+        },
+        {
+          "year": 2024,
+          "date": "2024-03-31"
+        },
+        {
+          "year": 2025,
+          "date": "2025-04-20"
+        },
+        {
+          "year": 2026,
+          "date": "2026-04-10"
+        },
+        {
+          "year": 2027,
+          "date": "2027-04-02"
+        },
+        {
+          "year": 2028,
+          "date": "2028-04-16"
+        },
+        {
+          "year": 2029,
+          "date": "2029-03-31"
+        },
+        {
+          "year": 2030,
+          "date": "2030-04-21"
+        },
+        {
+          "year": 2031,
+          "date": "2031-04-13"
+        },
+        {
+          "year": 2032,
+          "date": "2032-03-28"
+        },
+        {
+          "year": 2033,
+          "date": "2033-04-17"
+        },
+        {
+          "year": 2034,
+          "date": "2034-04-09"
+        },
+        {
+          "year": 2035,
+          "date": "2035-03-31"
+        }
+      ]
+    }
+  ]
+}

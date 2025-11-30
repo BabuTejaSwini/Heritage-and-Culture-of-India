@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heritage & Culture of India</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+   <!-- <link rel="stylesheet" href="./dist/output.css"> -->
+
+  <style>
+  .gradient-bg {
+             background:url('https://img.freepik.com/premium-vector/ndian-tricolor-orange-saffron-white-green-flag-gradient-backgroud_821611-523.jpg');
+background-size: cover;
+  background-position: center;
+}
+
+    .hidden-el { display: none !important; }
+    .fade-enter { animation: fadeIn 0.4s ease forwards; }
+    .fade-leave { animation: fadeOut 0.3s ease forwards; }
+    @keyframes fadeIn { from {opacity:0;transform:translateY(6px);} to {opacity:1;transform:none;} }
+    @keyframes fadeOut { from {opacity:1;} to {opacity:0;transform:translateY(6px);} }
+
+    /* ---------- Homepage card row ---------- */
+    #cardsRow { display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem; margin-top:2rem; }
+    .feature-card {
+      width:320px; height:220px;
+      border-radius:1rem; box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      cursor:pointer; transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .feature-card:hover { transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.12); }
+    .festival-card { background:linear-gradient(135deg,#ff7a59,#ffd07a); color:#fff; }
+    .heritage-card { background:linear-gradient(135deg,#334eea,#6b7bff); color:#fff; }
+    .tales-card    { background:linear-gradient(135deg,#fff7e6,#ffd9a6); color:#111; }
+
+    :root{
+    --bg:#f4f7fb;
+    --card:#fff;
+    --header-grad: linear-gradient(90deg,#7b2ff7,#2b9cff);
+    --dark-cell:#1f2937;
+    --sun-red:#ef5b5b;
+    --sat-blue:#33c2ff;
+    --accent:#ff8a5b;
+    --holiday-green:#18b93f;
+    --muted:#9aa4b2;
+    --card-shadow: 0 10px 30px rgba(21,32,64,0.08);
+    --glass: rgba(255,255,255,0.7);
+  }
+  *{box-sizing:border-box;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+  body{margin:0;background:linear-gradient(180deg,#f6f9ff,#f2f6fb);padding:28px;display:flex;justify-content:center}
+  body {
+  margin: 0;
+  /* background: linear-gradient(180deg, #f6f9ff, #f2f6fb); */
+  padding: 0; /* remove 28px that pushed header away */
+  display: block; /* remove flex layout */
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+
+  .page{width:1200px;max-width:96%;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+
+  /* calendar card */
+  .card{background:var(--card);border-radius:14px;box-shadow:var(--card-shadow);overflow:hidden}
+  .cal-header{padding:28px;background:var(--header-grad);color:white;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:6px solid rgba(255,255,255,0.05)}
+  .month-title{font-weight:800;font-size:26px;letter-spacing:0.4px}
+  .controls{display:flex;align-items:center;gap:12px}
+  .btn{background:rgba(255,255,255,0.12);border:0;color:white;padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:700;box-shadow:0 6px 18px rgba(11,22,40,0.08)}
+  .year-select{background:rgba(255,255,255,0.12);border:0;color:white;padding:8px 10px;border-radius:8px;font-weight:700}
+
+  .cal-body{padding:22px 22px 28px}
+  .weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-bottom:12px}
+  .weekday{background:linear-gradient(180deg,#2b3945,#1f2937);color:white;font-weight:700;border-radius:10px;padding:14px 8px;text-align:center;font-size:13px;box-shadow:0 8px 20px rgba(11,22,40,0.08)}
+
+  .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+  .day-cell{min-height:88px;background:linear-gradient(180deg,#fbfdff,#f7fafc);border-radius:12px;border:1px solid rgba(20,30,60,0.04);padding:12px;position:relative;display:flex;flex-direction:column;justify-content:flex-start;transition:transform .12s ease,box-shadow .12s ease}
+  .day-cell:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(11,22,40,0.08)}
+  .empty{background:transparent;border:0;box-shadow:none;opacity:0.5}
+  .date-number{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#24303b}
+
+  .sun .date-number{background:linear-gradient(180deg,#fb6b6b,#ef5b5b);color:white;box-shadow:0 8px 22px rgba(239,91,91,0.18)}
+  .sat-blue .date-number{background:linear-gradient(180deg,#5fd7ff,#33c2ff);color:white;box-shadow:0 8px 22px rgba(51,194,255,0.18)}
+  .muted{opacity:0.35;color:var(--muted)}
+
+  /* small event pill on day */
+  .event-pill{position:absolute;left:12px;bottom:10px;padding:6px 8px;border-radius:999px;font-weight:700;font-size:12px;color:white;box-shadow:0 8px 18px rgba(11,22,40,0.08)}
+  .event-pill.festival{background:var(--accent)}
+  .event-pill.holiday{background:var(--holiday-green)}
+
+  /* sidebar styling */
+  .sidebar{display:flex;flex-direction:column;gap:18px;align-self:flex-start}
+  .side-card{background:linear-gradient(90deg,#ff7a5b,#ff5aaf);color:white;padding:18px;border-radius:14px;box-shadow:var(--card-shadow)}
+  .side-card.alt{background:linear-gradient(90deg,#7b2ff7,#2b9cff);padding:14px 16px;color:white}
+  .legend{background:linear-gradient(180deg,#fffaf0,#fffefc);border-radius:12px;padding:14px;display:flex;gap:12px;align-items:center;color:#4b5563;box-shadow:0 6px 20px rgba(20,30,60,0.04)}
+  .counts{display:flex;flex-direction:column;gap:10px;font-weight:700}
+  .counts-row{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.08);padding:10px 12px;border-radius:10px}
+  .upcoming{background:var(--card);border-radius:12px;padding:10px;box-shadow:0 8px 20px rgba(20,30,60,0.05)}
+  .event-item{display:flex;gap:10px;align-items:flex-start;padding:10px;border-bottom:1px solid rgba(20,30,60,0.04)}
+  .event-item:last-child{border-bottom:0}
+  .event-date{min-width:84px;font-weight:700;color:#24303b}
+  .event-name{font-weight:800;color:#111827}
+  .event-desc{font-size:13px;color:#6b7280;margin-top:6px}
+
+  /* small responsivity */
+  @media (max-width:1100px){.page{grid-template-columns:1fr;}.sidebar{order:2}}
+
+  .states-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.state-card {
+  background: linear-gradient(135deg, #7b2ff7, #2b9cff);
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.state-card:hover {
+  transform: translateY(-5px);
+}
+
+.state-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 4px solid white;
+}
+
+.state-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.state-capital {
+  font-size: 14px;
+  color: #f0f0f0;
+  margin-top: 4px;
+}
+
+.calendar-icon {
+  font-size: 24px;
+  margin-top: 12px;
+}
+.calendar .day-cell {
+    border-radius: 12px !important;
+    margin: 3px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calendar .day-cell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.08);
+}
+.calendar-header {
+    background: linear-gradient(90deg, #7b2ff7, #2b9cff);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.date-number {
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    margin: auto;
+}
+
+.today-date {
+    background: linear-gradient(180deg, #976bff, #614bef) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    box-shadow: 0 8px 18px rgba(239, 75, 75, 0.25);
+}
+/* Highlight full box if a festival/holiday exists */
+.day-cell.event-day {
+  background: rgba(47, 100, 107, 0.15) !important; /* soft orange/pink */
+  border: 2px solid rgba(255, 126, 95, 0.6) !important;
+  border-radius: 12px !important;
+}
+
+/*  If today is selected - lavender glow */
+.day-cell.today-lavender {
+  background: #E6E6FA !important;  /* Lavender */
+  border: 2px solid #bcb4ff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(188, 180, 255, 0.5);
+}
+
+/* Ensure date number stays visible */
+.day-cell .date-number {
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
+}
+
+
+/* Green = National Holiday */
+.holiday-day .date-number {
+  background: #27ae60;      /* Green */
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px;
+}
+#taleContent p {
+  font-size: 1rem;      /* 16px */
+  line-height: 1.7;
+}
+
+#taleTitle {
+  font-size: 1.5rem;    /* 24px */
+  font-weight: 700;
+}
+
+#taleMoral {
+  font-size: 1rem;      /* 16px */
+  font-style: italic;
+}
+
+/*Heritage Places Part*/
+
+.fade-in {
+  animation: fadeIn .35s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut .35s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(10px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity:1; transform:translateY(0); }
+  to { opacity:0; transform:translateY(10px); }
+}
+
+.hidden-el {
+  display: none;
+}
+  #heritage_wrapper { max-width: 1100px; margin: 0 auto; }
+    .heritage-maincard {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(15,23,42,0.06);
+      cursor: pointer;
+    }
+    .heritage-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+      gap: 18px;
+      margin-top: 22px;
+      opacity: 0;
+      transition: opacity .45s ease, transform .45s ease;
+    }
+    .heritage-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(17,24,39,0.06);
+      display:flex;
+      flex-direction:column;
+      height: 340px; /* fixed height for uniform cards */
+      cursor:pointer;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .heritage-card:hover { transform: translateY(-6px); box-shadow: 0 10px 28px rgba(17,24,39,0.08); }
+    .heritage-card img { width:100%; height:180px; object-fit:cover; }
+    .heritage-card .card-body { padding:12px; display:flex; flex-direction:column; justify-content:center; flex:1; text-align:center; }
+    .heritage-cards.show { opacity: 1; transform: translateY(0); }
+    .heritage-details {
+      background: white;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(17,24,39,0.07);
+      opacity: 0;
+      transition: opacity .45s ease, transform .45s ease;
+      transform: translateY(8px);
+    }
+    .heritage-details.show { opacity: 1; transform: translateY(0); }
+    .heritage-hero { width:100%; height:300px; object-fit:cover; border-radius:8px; margin-bottom:14px; }
+    .heritage-highlights { display:flex; gap:12px; margin-top:10px; flex-wrap:wrap; }
+    .heritage-chip { background:#f8f5ff; color:#5b21b6; padding:8px 12px; border-radius:999px; font-weight:600; font-size:13px; }
+    .heritage-actions { margin-top:18px; display:flex; gap:10px; align-items:center; }
+    .heritage-btn { background:#6a1b9a; color:white; padding:10px 14px; border-radius:8px; text-decoration:none; display:inline-block; font-weight:700; }
+    .heritage-back { background:#e6e6e6; color:#222; padding:8px 12px; border-radius:8px; cursor:pointer; }
+  </style>
+
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+  <!-- ---------- HEADER ---------- -->
+   <header class="gradient-bg text-white py-3 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo Section -->
+                <div class="flex items-center space-x-3">
+                    <div class="text-3xl"><img src="https://cdn-icons-png.flaticon.com/512/3909/3909444.png", width = "40px", height="20px"></div>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold">Heritage and Culture of India</h1>
+                                          </div>
+                </div>
+                
+                <!-- Navigation & Language in Single Line -->
+                <div class="flex items-center space-x-2 md:space-x-4">
+                   
+                    <nav class="flex items-center space-x-1 md:space-x-2">
+                        <button onclick="showPage('homePage')" class="bg-black bg-opacity-20 px-2 md:px-3 py-1.5 md:py-2 rounded-full hover:bg-opacity-30 transition-all text-xs md:text-sm whitespace-nowrap">
+                            🏠 Home
+                        </button>
+                        <button onclick="showArtWorkshops()" class="bg-black bg-opacity-20 px-2 md:px-3 py-1.5 md:py-2 rounded-full hover:bg-opacity-30 transition-all text-xs md:text-sm whitespace-nowrap">
+                            🎨 Workshops
+                        </button>
+                        <button onclick="showPage('folkTalesPage')" class="bg-black bg-opacity-20 px-2 md:px-3 py-1.5 md:py-2 rounded-full hover:bg-opacity-30 transition-all text-xs md:text-sm whitespace-nowrap">
+                            📚 Tales
+                        </button>
+                        <button onclick="showPage('festivalPage')" class="bg-black bg-opacity-20 px-2 md:px-3 py-1.5 md:py-2 rounded-full hover:bg-opacity-30 transition-all text-xs md:text-sm whitespace-nowrap">
+                            🎉 Festivals
+                        </button>
+                        <button onclick="goToQuiz()" 
+        class="bg-black bg-opacity-20 px-2 md:px-3 py-1.5 md:py-2 rounded-full hover:bg-opacity-30 transition-all text-xs md:text-sm whitespace-nowrap">
+  🧠 Quiz
+</button>
+                    </nav>
+          <!-- Language Dropdown -->
+             <div id="google_translate_element"></div>
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'en', 
+        includedLanguages: 'en,hi,kn,te,ta,mr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</header>
+
+
+<!-- ---------- MAIN CONTAINER ---------- -->
+ <div class="content-container mx-auto px-4 py-6"></div>
+  <main id="mainContainer" class="max-w-6xl mx-auto p-6">
+    
+    
+    <section id="homePage" class="fade-enter">
+       <section class="bg-gradient-to-br from-orange-100 via-red-50 to-yellow-100 py-28 bg-cover bg-center relative"
+                     style="background-image: url('https://3.bp.blogspot.com/-TnJ7BBUOZa8/WrhiiNttLlI/AAAAAAAAABI/J4aUVHH2-ukHx3PGN_6wmXODtmGDDAmBwCLcBGAs/s1600/amazinf-facts-indian-culture.jpg');">
+                <!-- Dark overlay for better text readability -->
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                
+                <div class="container mx-auto px-4 text-center relative z-10">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Discover India's Rich Heritage</h1>
+                    <p class="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed">
+                        Explore the diverse cultures, traditions, arts, and stories that make India incredible. 
+                        From ancient temples to vibrant festivals, embark on an interactive journey through Bharat's timeless legacy.
+                    </p>
+                </div>
+            </section>
+
+      <div id="cardsRow">
+        <div class="feature-card festival-card" onclick="showPage('festivalPage')">
+          <div class="text-4xl">🎉</div>
+          <div class="text-xl font-bold">Festival Calendar</div>
+          <p class="text-sm opacity-90">State-wise calendar and events</p>
+        </div>
+
+<div id="heritageCard"
+     class="feature-card rounded-2xl text-center cursor-pointer"
+     style="background: linear-gradient(135deg,#f2e7d5,#e8d8c3); color:#3b2f2f;"
+     onclick="showPlacesGrid()">
+
+    <div class="text-4xl">🏛️</div>
+    <div class="text-xl font-bold">Historical Places</div>
+    <p class="text-sm opacity-90">Explore ancient monuments and heritage sites</p>
+
+</div>
+
+
+        <div class="feature-card tales-card" onclick="showFolkTales()">
+          <div class="text-4xl">📚</div>
+          <div class="text-xl font-bold">Folk Tales</div>
+          <p class="text-sm opacity-90">Traditional stories & wisdom</p>
+        </div>
+        <div class="feature-card arts-card" onclick="showArtsPage()"
+     style="background: linear-gradient(135deg,#ffe6f2,#ffd6ea); color:#111;">
+  <div class="text-4xl">🎨</div>
+  <div class="text-xl font-bold">Arts & Crafts</div>
+  <p class="text-sm opacity-90">Explore traditional Indian art forms</p>
+</div>
+ 
+      </div>
+    </section>
+<section id="festivalPage" class="hidden-el"> 
+    <div id="festivalCard" class="festival-card">
+   <h2>Festivals of India</h2>
+  <p>Click to explore vibrant celebrations across states.</p>
+</div> 
+
+  <div id="stateSelectionView" style="padding: 20px;">
+  <h2 style="font-weight:800; text-align:center; margin-bottom: 20px;">Select a State / UT</h2>
+  <div id="states-container" class="states-grid"></div>
+  <div id="statesGrid" class="states-grid"></div>
+</div>
+
+<!--  Calendar View -->
+<div id="calendarView" style="display: none;">
+  <div class="page">
+
+    <div class="card">
+      <div class="cal-header">
+        <button id="backBtn" class="btn">← Back to States</button>
+        <button class="btn" id="prevBtn" aria-label="Previous month">← Previous</button>
+
+        <div style="flex:1;text-align:center;">
+          <div class="month-title" id="monthTitle">Month Year</div>
+          <div style="margin-top:8px;">
+            <label for="yearSelect" style="color:rgba(255,255,255,0.95);font-weight:700;margin-right:8px;">Select Year:</label>
+            <select id="yearSelect" class="year-select" aria-label="Select year"></select>
+          </div>
+        </div>
+
+        <button class="btn" id="nextBtn" aria-label="Next month">Next →</button>
+      </div>
+
+      <div class="cal-body">
+        <div class="weekdays" aria-hidden="true">
+          <div class="weekday">Sun</div>
+          <div class="weekday">Mon</div>
+          <div class="weekday">Tue</div>
+          <div class="weekday">Wed</div>
+          <div class="weekday">Thu</div>
+          <div class="weekday">Fri</div>
+          <div class="weekday">Sat</div>
+        </div>
+
+        <div class="grid" id="calendarGrid" role="grid" aria-label="Calendar grid"></div>
+
+        <div style="margin-top:18px;">
+          <div class="legend">
+            <div style="flex:1;display:flex;gap:18px;align-items:center;">
+              <div style="display:flex;gap:12px;align-items:center;"><span class="dot" style="width:12px;height:12px;border-radius:50%;background:var(--sun-red)"></span> Sundays</div>
+              <div style="display:flex;gap:12px;align-items:center;"><span class="dot" style="width:12px;height:12px;border-radius:50%;background:var(--sat-blue)"></span> 2nd & 4th Saturdays</div>
+              <!---<div style="display:flex;gap:12px;align-items:center;"><span class="dot" style="width:12px;height:12px;border-radius:50%;background:var(--accent)"></span> Festivals</div>---->
+              <div style="display:flex;gap:12px;align-items:center;"><span class="dot" style="width:12px;height:12px;border-radius:50%;background:var(--holiday-green)"></span> Holidays</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="side-card" id="countsCard">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+          <div style="font-weight:800;font-size:16px">This Month</div>
+          <div style="font-weight:800;font-size:20px" id="totalThisMonth">0</div>
+        </div>
+        <div style="margin-top:14px;" class="counts">
+          <div class="counts-row"><div>🎉 Festivals:</div><div id="countFestivals">0</div></div>
+          <div class="counts-row"><div>🏛️ Holidays:</div><div id="countHolidays">0</div></div>
+          <div class="counts-row"><div>🗓️ Weekends:</div><div id="countWeekends">0</div></div>
+        </div>
+      </div>
+
+      <div class="side-card alt" style="padding:14px;">
+        <div style="font-weight:800;font-size:16px">Upcoming Events</div>
+      </div>
+
+      <div class="upcoming" id="upcomingList">
+        <div style="padding:10px;color:#6b7280;">Loading events...</div>
+      </div>
+    </div>
+  </div>    
+
+</section>
+
+<!-- Heritage Part -->
+<section id="heritagePage" class="hidden-el p-6 bg-gray-50">
+
+  <div id="heritage_wrapper">
+
+    <!-- compact header -->
+    <div class="heritage-maincard" id="heritage_localMainCard" role="button" tabindex="0">
+      <div class="text-3xl mb-2">🏛️ Historical Places</div>
+      <div class="text-sm text-gray-600">Discover monuments, architecture & history — click to explore</div>
+    </div>
+
+    <!-- cards grid -->
+    <div id="heritage_cards" class="heritage-cards hidden-el mt-6"></div>
+
+    <!-- detail panel -->
+    <div id="heritage_details" class="heritage-details hidden-el mt-6">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <button id="heritage_back_to_cards" class="heritage-back">← Back to list</button>
+        <button class="heritage-back" onclick="showPage('homePage')">← Back to Home</button>
+      </div>
+
+      <img id="heritage_hero_img" class="heritage-hero" src="" alt="hero image" />
+      <h2 id="heritage_title" class="text-2xl font-bold"></h2>
+      <div id="heritage_description" class="text-gray-700 mt-2"></div>
+
+      <div class="heritage-highlights" id="heritage_highlights"></div>
+
+      <div class="heritage-actions">
+        <a id="heritage_wiki_link" class="heritage-btn" target="_blank" rel="noopener">Read full article</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- FolkTales Part -->
+<section id="folkTalesPage" class="hidden-el">
+  <h2>Folk Tales of India</h2>
+  <p class="muted"></p>
+ <div id="folkTalesGrid"
+     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center p-6">
+</div>
+
+  <div id="folkLoading" class="loading hidden">Loading...</div>
+  <div id="folkError" class="error hidden">Could not load stories...</div>
+</section>
+
+<section id="taleDetailsPage" class="hidden fade-in">
+  <div class="details">
+    <button class="back-btn" onclick="backToFolkTales()">← Back</button>
+
+    <div style="display:flex;gap:14px;align-items:center">
+      <div id="taleIcon" style="font-size:48px">📖</div>
+      <div>
+        <h3 id="taleTitle" style="margin:.2rem 0">Title</h3>
+        <div id="taleOrigin" class="muted"></div>
+      </div>
+    </div>
+
+    <div id="taleContent" style="margin-top:12px;color:#374151;line-height:1.6"></div>
+    <div id="taleMoral" style="margin-top:14px;background:#f1f5f9;padding:10px;border-radius:8px;color:#065f46"></div>
+  </div>
+
+    <!-- Voice controls -->
+    <div>
+      <label for="voiceSelect">Voice</label>
+      <select id="voiceSelect"></select>
+      <label for="rateRange">Rate</label>
+      <input id="rateRange" type="range" min="0.6" max="1.6" step="0.05" value="1" />
+      <button id="playBtn" onclick="readTaleAloud()">🔊 Play</button>
+      <button id="pauseBtn" onclick="pauseReading()" disabled>⏸ Pause</button>
+      <button id="resumeBtn" onclick="resumeReading()" disabled>▶ Resume</button>
+      <button id="stopBtn" onclick="stopReading()" disabled>⏹ Stop</button>
+    </div>
+  </div>
+</section>
+<section id="quizSection" class="hidden-el">
+  <div class="quiz-container">
+    <h2 class="section-title">Heritage Quiz</h2>
+    <div id="quizContent"></div>
+    <button id="submitQuizBtn" class="btn">Submit Answers</button>
+  </div>
+</section>
+<!-- ARTS & CRAFTS MAIN GRID -->
+<section id="artsPage" class="hidden-el">
+  <h2 class="text-3xl font-bold text-center my-4">Arts & Crafts of India</h2>
+
+  <div id="artsGrid"
+       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 justify-items-center">
+  </div>
+
+  <div id="artsLoading" class="text-center hidden">Loading...</div>
+  <div id="artsError" class="text-center hidden text-red-600">Could not load arts...</div>
+</section>
+
+
+<!-- ARTS DETAILS PAGE -->
+<section id="artsDetailsPage" class="hidden-el fade-enter p-6">
+  <button class="px-4 py-2 bg-gray-700 text-white rounded-md mb-4"
+          onclick="backToArts()">
+    ← Back
+  </button>
+
+  <div class="flex items-center gap-4 mb-4">
+    <div id="artsDetailEmoji" class="text-5xl"></div>
+    <h2 id="artsDetailTitle" class="text-3xl font-bold"></h2>
+  </div>
+
+  <img id="artsDetailImage" class="w-full max-w-2xl rounded-md shadow mb-4" />
+
+  <p id="artsDetailShort" class="text-lg text-gray-700 mb-4"></p>
+
+  <h3 class="text-xl font-semibold mt-4 mb-2">How It’s Made</h3>
+  <ul id="artsStepsList" class="list-disc pl-6 space-y-2 text-gray-700"></ul>
+
+  <h3 class="text-xl font-semibold mt-6 mb-2">Tutorial Video</h3>
+  <iframe id="artsDetailVideo" width="560" height="315"
+          class="rounded-lg shadow border"
+          allowfullscreen>
+  </iframe>
+</section>
+
+
+
+
+
+ <footer class="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white py-16">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div class="md:col-span-2">
+                            <div class="flex items-center space-x-4 mb-6">
+
+                                <div class="text-4xl"><img src="https://cdn-icons-png.flaticon.com/512/3909/3909444.png", width = "40px", height="20px"></div>
+                                <div>
+                                    <h3 class="text-2xl font-bold">Incredible India</h3>
+                                    <p class="text-gray-300">Cultural Heritage Explorer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed max-w-md">
+                                Discover the rich tapestry of Indian culture through interactive experiences, 
+                                traditional arts, captivating stories, and historical treasures.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">Explore</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li><a href="#" onclick="showHeritageStates()" class="hover:text-white transition-colors">Heritage Sites</a></li>
+                                <li><a href="#" onclick="showFestivalStates()" class="hover:text-white transition-colors">Festivals</a></li>
+                                <li><a href="#" onclick="showArtWorkshops()" class="hover:text-white transition-colors">Art Workshops</a></li>
+                                <li><a href="#" onclick="showFolkTales()" class="hover:text-white transition-colors">Folk Tales</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">Connect</h4>
+                            <div class="flex space-x-4 text-2xl">
+                                <span class="cursor-pointer hover:text-orange-400 transition-colors">📧</span>
+                                <span class="cursor-pointer hover:text-orange-400 transition-colors">📱</span>
+                                <span class="cursor-pointer hover:text-orange-400 transition-colors">🌐</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mt-4">
+                                © 2024 Incredible India Cultural Explorer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+  <script>
+    let render;
+   
+  const pages = ['homePage','festivalPage','heritagePage','folkTalesPage','taleDetailsPage','artsPage','artsDetailsPage'];//'placesGrid','articleView' ];
+
+
+
+
+ function showPage(targetId) {
+  pages.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    if (id === targetId) {
+      el.classList.remove('hidden-el');
+      el.classList.remove('fade-leave');
+      el.classList.add('fade-enter');
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+
+      // NEW: trigger page-specific on-show hooks
+      if (id === 'folkTalesPage') {
+        // small delay so fade animation has started and DOM is visible
+        setTimeout(() => {
+          // call loader but avoid duplicate loads if already loaded
+          if (!window._folktalesLoaded) {
+            if (typeof showFolkTales === 'function') showFolkTales();
+            else if (typeof loadFolkTales === 'function') loadFolkTales();
+            window._folktalesLoaded = true;
+          }
+        }, 100);
+      }
+
+
+    } else if (!el.classList.contains('hidden-el')) {
+      el.classList.remove('fade-enter');
+      el.classList.add('fade-leave');
+      setTimeout(() => {
+        el.classList.add('hidden-el');
+        el.classList.remove('fade-leave');
+      }, 280);
+    } else {
+      el.classList.add('hidden-el');
+    }
+  });
+}
+
+
+//Festival Part
+
+(function () {
+  const stateView = document.getElementById("stateSelectionView");
+  const calendarView = document.getElementById("calendarView");
+  const statesGrid = document.getElementById("statesGrid");
+  const backBtn = document.getElementById("backBtn");
+
+  let currentState = null;
+  let now = new Date();
+  let currentYear = now.getFullYear();
+  let currentMonth = now.getMonth();
+
+  // ✅ Step 1: Display States List
+  const states = [
+            // States (28)
+            { name: "Andhra Pradesh", capital: "Amaravati",  image: "https://im.hunt.in/cg/Andhra/About/Profile/collage_andhra.jpg", type: "state" },
+            { name: "Arunachal Pradesh", capital: "Itanagar",  image: "https://gkindiatoday.com/wp-content/uploads/2018/03/India-Maps-Arunachal-Pradesh.jpg", type: "state" },
+            { name: "Assam", capital: "Dispur",  image: "https://i.pinimg.com/originals/4d/2c/ec/4d2cec24e7319bf05e2cfafc6184cb70.gif", type: "state" },
+            { name: "Bihar", capital: "Patna",  image: "https://thumbs.dreamstime.com/z/historical-map-bihar-offers-visual-representation-region-s-geographical-cultural-evolution-over-time-can-show-285997329.jpg?w=576", type: "state" },
+            { name: "Chhattisgarh", capital: "Raipur",  image: "https://th.bing.com/th/id/R.2d4e6ab8eb4af084e43d744cc8c904ff?rik=9AfwDwYkUgDJwA&riu=http%3a%2f%2fwww.memeraki.com%2fcdn%2fshop%2farticles%2fCH_MAP_FINAL_1200x1200.png%3fv%3d1716285491&ehk=85BUWU5BTWkEe3KWuRjo0eLuLJBFqKW7G2sv30mNfBk%3d&risl=&pid=ImgRaw&r=0", type: "state" },
+            { name: "Goa", capital: "Panaji",  image: "https://i.pinimg.com/originals/d5/46/dd/d546dd56244569480248eb4f891235ae.jpg", type: "state" },
+            { name: "Gujarat", capital: "Gandhinagar",  image: "https://www.memeraki.com/cdn/shop/articles/GUJRAT_MAP_1_1024x.png?v=1708150133", type: "state" },
+            { name: "Haryana", capital: "Chandigarh",  image: "https://th.bing.com/th/id/OIP.FZNYI6UqnxIsbDQUV9CyzQHaFc?w=221&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", type: "state" },
+            { name: "Himachal Pradesh", capital: "Shimla",  image: "https://tse1.mm.bing.net/th/id/OIP.FoQysmK1cyX7kcFZI_ZXGQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3", type: "state" },
+            { name: "Jharkhand", capital: "Ranchi",  image: "https://th.bing.com/th/id/OIP.GV7hW7InaWkNf4WaHnyLigHaGX?w=206&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", type: "state" },
+            { name: "Karnataka", capital: "Bengaluru",  image: "https://th.bing.com/th/id/OIP.VrbzOzOG5odWsujHDeWTIgHaFX?w=275&h=199&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", type: "state" },
+            { name: "Kerala", capital: "Thiruvananthapuram",  image: "https://i.pinimg.com/736x/6b/3e/dc/6b3edcc94e3b984505dfee95f085917b.jpg", type: "state" },
+            { name: "Madhya Pradesh", capital: "Bhopal",  image: "https://www.worldheritageolympiad.org/uploads/event/Madhya%20Pradesh%20Heritage%20Olympiad%20Poster_page-0001_11zon.jpg", type: "state" },
+            { name: "Maharashtra", capital: "Mumbai",  image: "https://th.bing.com/th/id/OIP.my93nflm8AVp3ILViQuxZQAAAA?w=234&h=183&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", type: "state" },
+            { name: "Manipur", capital: "Imphal",  image: "https://assets.nicepagecdn.com/e322d1b6/5476224/images/India-Maps---Manipur.jpg", type: "state" },
+            { name: "Meghalaya", capital: "Shillong",  image: "https://assets.nicepagecdn.com/e322d1b6/5476224/images/India-Maps---Meghalaya1.jpg", type: "state" },
+            { name: "Mizoram", capital: "Aizawl",  image: "https://assets.nicepagecdn.com/e322d1b6/5476224/images/India-Maps---Mizoram.jpg", type: "state" },
+            { name: "Nagaland", capital: "Kohima",  image: "https://assets.nicepagecdn.com/e322d1b6/5476224/images/IndiaMaps-Nagaland.png", type: "state" },
+            { name: "Odisha", capital: "Bhubaneswar",  image: "https://tse4.mm.bing.net/th/id/OIP.PcdH7T8aIBMXdfHMt9af8gHaEz?pid=ImgDet&w=206&h=133&c=7&dpr=1.3&o=7&rm=3", type: "state" },
+            { name: "Punjab", capital: "Chandigarh",  image: "https://th.bing.com/th/id/OIP.TOeNIiIes3LWPRtA2nHmEwAAAA?w=171&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", type: "state" },
+            { name: "Rajasthan", capital: "Jaipur",  image: "https://th.bing.com/th/id/OIP.ieeki6DX6kMYZh7ab2DETQAAAA?w=200&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", type: "state" },
+            { name: "Sikkim", capital: "Gangtok",  image: "https://th.bing.com/th/id/OIP.lJ_rUcUnAuT_J2u6wEIRBgHaI6?w=147&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7", type: "state" },
+            { name: "Tamil Nadu", capital: "Chennai",  image: "https://i.pinimg.com/474x/22/22/fc/2222fc29d7036408fd5e7f1860409095.jpg?nii=t", type: "state" },
+            { name: "Telangana", capital: "Hyderabad",  image: "https://tse3.mm.bing.net/th/id/OIP.bMBDudNEvYRfrU9IrBNu3AHaF1?pid=ImgDet&w=206&h=162&c=7&dpr=1.3&o=7&rm=3", type: "state" },
+            { name: "Tripura", capital: "Agartala",  image: "https://assets.nicepagecdn.com/e322d1b6/5476224/images/India-Maps---Tripura.jpg", type: "state" },
+            { name: "Uttar Pradesh", capital: "Lucknow",  image: "https://th.bing.com/th/id/OIP.MWAyXi1tj2oafrKETPY9jgHaEK?w=328&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", type: "state" },
+            { name: "Uttarakhand", capital: "Dehradun",  image: "https://images.squarespace-cdn.com/content/v1/513f18f3e4b09478fd29cb47/1478946981035-N06DRHFPELIEXLOA5IF3/image-asset.png", type: "state" },
+            { name: "West Bengal", capital: "Kolkata",  image: "https://th.bing.com/th/id/OIP.RXemoUdZT3QLkwHAdym6hAHaJG?w=151&h=186&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", type: "state" },
+            
+            // Union Territories (8)
+            { name: "Andaman & Nicobar Islands", capital: "Port Blair",  image: "https://th.bing.com/th/id/OIP.v_AXx5-rijz9JMJMxwEgZAHaEo?w=243&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", type: "ut" },
+            { name: "Chandigarh", capital: "Chandigarh",  image: "https://cdn3.vectorstock.com/i/1000x1000/57/62/chandigarh-map-design-template-vector-47925762.jpg", type: "ut" },
+            { name: "Dadra & Nagar Haveli and Daman & Diu", capital: "Daman",  image: "https://tse3.mm.bing.net/th/id/OIP.ietG6-agMaGA8xcccKVdhQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", type: "ut" },
+            { name: "Delhi", capital: "New Delhi",  image: "https://3.bp.blogspot.com/-U07E9dV5ug8/Vwsk5fF9HDI/AAAAAAAAAn4/9YUVBCtc-ews8sADlIXXeI6pLVmCwXsNQ/s1600/Delhi%2BCULTURE.jpg", type: "ut" },
+            { name: "Jammu & Kashmir", capital: "Srinagar (Summer), Jammu (Winter)",  image: "https://cdna.artstation.com/p/assets/images/images/021/295/502/large/arsalan-khan-jammu-kashmir-original-map.jpg?1571139984", type: "ut" },
+            { name: "Ladakh", capital: "Leh",  image: "https://thumbs.dreamstime.com/z/ladakh-map-district-map-ladakh-ladakh-map-district-capital-full-district-map-ladakh-ladakh-map-district-map-218776237.jpg?w=992", type: "ut" },
+            { name: "Lakshadweep", capital: "Kavaratti",  image: "https://th.bing.com/th/id/R.3518c2fb561b0336b8c11ad884af9d93?rik=wPzuCjJbAfQofw&riu=http%3a%2f%2fwww.lakshadweeptour.in%2fimages%2flakshadweep-map-1.jpg&ehk=1ZI2kzcP5srwDobYcYmAAPTlnqPOA%2b9MrxWsNp2JRQI%3d&risl=&pid=ImgRaw&r=0", type: "ut" },
+            { name: "Puducherry", capital: "Puducherry",  image: "https://i.pinimg.com/originals/b8/4b/c7/b84bc7b8047ccf69f31c9a8167397fd3.jpg", type: "ut" }
+        ];
+
+  function loadStates() {
+  const grid = document.getElementById("statesGrid");
+  grid.innerHTML = "";
+
+  states.forEach(s => {
+    const card = document.createElement("div");
+    card.className = "state-card";
+
+    card.innerHTML = `
+      <img
+      src="${s.image}" alt="${s.name}">
+      <div class="state-name">${s.name}</div>
+      <div class="state-capital">Capital: ${s.capital}</div>
+      <div class="calendar-icon">📅</div>
+    `;
+
+    card.addEventListener("click", () => {
+  currentState = s.name;
+  document.getElementById("stateSelectionView").style.display = "none";
+  document.getElementById("calendarView").style.display = "block";
+  loadStateFestivals(s.name);  // <-- load merged common + state-specific
+});
+
+    grid.appendChild(card);
+  });
+}
+
+backBtn.addEventListener("click", () => {
+  document.getElementById("calendarView").style.display = "none";
+  document.getElementById("stateSelectionView").style.display = "block";
+});
+
+ //  Place this before any (() => { ... })(); blocks
+  function buildEventsMap(events) {
+    const map = {};
+    events.forEach(ev => {
+      if (!ev.date) return;
+      if (!map[ev.date]) map[ev.date] = [];
+      map[ev.date].push(ev);
+    });
+    return map;
+  }
+
+
+async function loadStateFestivals(stateName) {
+  currentState = stateName;
+
+  try {
+    // Load all-India common festivals from JSON
+    const res = await fetch('/api/festivals');
+    const commonData = await res.json();
+    let commonFestivals = [];
+
+    // Parse and normalize fixed holidays (holidays and non_holidays)
+    if (commonData.fixed_holidays && commonData.fixed_holidays.holidays) {
+      commonFestivals.push(...commonData.fixed_holidays.holidays.map(ev => ({
+        ...ev,
+        type: ev.type === 'National' ? 'holiday' : 'festival'  // Map "National" to "holiday", others to "festival"
+      })));
+    }
+    if (commonData.fixed_holidays && commonData.fixed_holidays.non_holidays) {
+      commonFestivals.push(...commonData.fixed_holidays.non_holidays.map(ev => ({
+        ...ev,
+        type: ev.type === 'National' ? 'holiday' : 'festival'  
+      })));
+    }
+
+    // Parse and normalize movable festivals, Filter by currentYear
+    if (commonData.movable_festivals) {
+      commonData.movable_festivals.forEach(fest => {
+        // Find the date entry for the current year
+        const yearEntry = fest.dates.find(d => d.year === currentYear);
+        if (yearEntry) {
+          commonFestivals.push({
+            name: fest.name,
+            date: yearEntry.date,  // Use the date for that year
+            type: fest.type === 'Religious' || fest.type === 'Cultural' ? 'festival' : 'holiday',  // Map types
+            overview: fest.overview
+          });
+        }
+      });
+    }
+
+    // hardcoded state-specific festivals
+   const stateFestivalsData = {
+  "Jammu and Kashmir": [
+    { name: "Maharaja Hari Singh’s Birthday", date: "2025-09-23", type: "festival", overview: "Birth anniversary of the last Dogra ruler, Maharaja Hari Singh." },
+    { name: "Accession Day", date: "2025-10-26", type: "holiday", overview: "Marks the signing of the Instrument of Accession in 1947." }
+  ],
+  "Himachal Pradesh": [
+    { name: "Himachal Pradesh Statehood Day", date: "2025-01-25", type: "holiday", overview: "Celebrates the day Himachal Pradesh became the 18th state of India." },
+    { name: "Himachal Day", date: "2025-04-15", type: "holiday", overview: "Commemorates the creation of Himachal Pradesh province in 1948." }
+  ],
+  "Uttarakhand": [
+    { name: "Harela", date: "2025-07-16", type: "festival", overview: "Celebrated to mark monsoon onset; involves planting saplings." },
+    { name: "Phool Dei", date: "2025-03-31", type: "festival", overview: "Children offer flowers and sweets at homes." },
+    { name: "Kandali Festival", date: "2025-08-01", type: "festival", overview: "Celebrated when Kandali flowers bloom once every 12 years." },
+    { name: "Uttarakhand Foundation Day", date: "2025-11-09", type: "holiday", overview: "Formation of Uttarakhand in 2000." }
+  ],
+  "Haryana": [
+    { name: "Haryana Day", date: "2025-11-01", type: "holiday", overview: "Commemorates formation of Haryana in 1966." }
+  ],
+  "Punjab": [
+    { name: "Guru Tegh Bahadur Martyrdom Day", date: "2025-12-11", type: "holiday", overview: "Honors the martyrdom of the 9th Sikh Guru." },
+    { name: "Shaheedi Divas of Bhagat Singh, Rajguru & Sukhdev", date: "2025-03-23", type: "holiday", overview: "Marks martyrdom of Indian freedom fighters." }
+  ],
+  "Uttar Pradesh": [
+    { name: "Uttar Pradesh Day", date: "2025-01-24", type: "holiday", overview: "Commemorates the renaming of United Provinces to Uttar Pradesh." },
+    { name: "Maghar Mahotsav", date: "2025-01-28", type: "festival", overview: "Annual festival in Maghar honoring Saint Kabir." }
+  ],
+  "Delhi": [
+    { name: "Delhi Statehood Day / NCT Day", date: "2025-02-15", type: "holiday", overview: "Celebrates Delhi’s NCT formation." },
+    { name: "Guru Tegh Bahadur Martyrdom Day", date: "2025-11-24", type: "holiday", overview: "Commemorates Guru Tegh Bahadur’s martyrdom." }
+  ],
+  "Andhra Pradesh": [
+    { name: "Kanuma Panduga", date: "2025-01-16", type: "festival", overview: "Honors Lord Krishna and cattle during harvest." },
+    { name: "Andhra Pradesh Formation Day", date: "2025-11-01", type: "holiday", overview: "Commemorates AP’s formation in 1956." }
+  ],
+  "Karnataka": [
+    { name: "Karnataka Rajyotsava", date: "2025-11-01", type: "holiday", overview: "Marks Karnataka’s formation in 1956." }
+  ],
+  "Kerala": [
+    { name: "Attukal Pongala", date: "2025-03-13", type: "festival", overview: "Largest women’s religious gathering at Attukal Temple." }
+  ],
+  "Tamil Nadu": [
+    { name: "Pongal", date: "2025-01-14", type: "festival", overview: "Harvest festival celebrated with family and feasts." },
+    { name: "Thiruvalluvar Day", date: "2025-01-15", type: "holiday", overview: "Birth anniversary of poet Thiruvalluvar." },
+    { name: "Uzhavar Thirunal", date: "2025-01-16", type: "holiday", overview: "Honors Tamil Nadu’s farming community." }
+  ],
+  "Telangana": [
+    { name: "Telangana Formation Day", date: "2025-06-02", type: "holiday", overview: "Commemorates Telangana’s formation in 2014." }
+  ],
+  "Rajasthan": [
+    { name: "Rajasthan Day", date: "2025-03-30", type: "holiday", overview: "Formation of Rajasthan after princely states’ integration." }
+  ],
+  "Gujarat": [
+    { name: "Gujarat Day", date: "2025-05-01", type: "holiday", overview: "Marks Gujarat’s formation from Bombay State in 1960." }
+  ],
+  "Maharashtra": [
+    { name: "Maharashtra Day", date: "2025-05-01", type: "holiday", overview: "Formation of Maharashtra and Gujarat in 1960." }
+  ],
+  "Goa": [
+    { name: "Goa Liberation Day", date: "2025-12-19", type: "holiday", overview: "Goa’s liberation from Portuguese rule in 1961." }
+  ],
+  "Bihar": [
+    { name: "Bihar Day", date: "2025-03-22", type: "holiday", overview: "Formation of Bihar as a separate province in 1912." }
+  ],
+  "Jharkhand": [
+    { name: "Jharkhand Foundation Day", date: "2025-11-15", type: "holiday", overview: "Formation of Jharkhand in 2000." }
+  ],
+  "Odisha": [
+    { name: "Odisha Day (Utkal Divas)", date: "2025-04-01", type: "holiday", overview: "Formation of Odisha as a province in 1936." }
+  ],
+  "West Bengal": [
+    { name: "West Bengal Day", date: "2025-06-20", type: "holiday", overview: "Official West Bengal State Day established in 2023." }
+  ],
+  "Sikkim": [
+    { name: "Sikkim State Day", date: "2025-05-16", type: "holiday", overview: "Sikkim became India’s 22nd state in 1975." }
+  ],
+  "Madhya Pradesh": [
+    { name: "Madhya Pradesh Day", date: "2025-11-01", type: "holiday", overview: "Formation of MP on November 1, 1956." }
+  ],
+  "Chhattisgarh": [
+    { name: "Chhattisgarh Day", date: "2025-11-01", type: "holiday", overview: "Formation of Chhattisgarh in 2000." }
+  ]
+};
+
+    
+    //  Merge based on selected state
+    const stateFestivals = stateFestivalsData[stateName] || [];
+    const allFestivals = [...commonFestivals, ...stateFestivals];
+
+    // Render in the calendar
+    const eventsMap = buildEventsMap(allFestivals);
+    render(currentYear, currentMonth, eventsMap);
+  } catch (err) {
+    console.error('Error loading festivals:', err);
+  }
+}
+
+  // Step 4: Load india_common.json for all states
+  function loadAndRender() {
+    fetch('/api/festivals')
+      .then(res => res.json())
+      .then(data => {
+        const arr = data.festivals || [];
+        const eventsMap = buildEventsMap(arr);
+        render(currentYear, currentMonth, eventsMap);
+      });
+  }
+
+  prevBtn.addEventListener('click', () => {
+  currentMonth--;
+  if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+  currentState ? loadStateFestivals(currentState) : loadAndRender();
+});
+
+nextBtn.addEventListener('click', () => {
+  currentMonth++;
+  if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+  currentState ? loadStateFestivals(currentState) : loadAndRender();
+});
+
+  // Default view = State selection first
+  calendarView.style.display = "none";
+  stateView.style.display = "block";
+  loadStates();
+})();
+
+(function(){
+  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const grid = document.getElementById('calendarGrid');
+  const monthTitle = document.getElementById('monthTitle');
+  const yearSelect = document.getElementById('yearSelect');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  const countFestivals = document.getElementById('countFestivals');
+  const countHolidays = document.getElementById('countHolidays');
+  const countWeekends = document.getElementById('countWeekends');
+  const totalThisMonth = document.getElementById('totalThisMonth');
+  const upcomingList = document.getElementById('upcomingList');
+
+  let now = new Date();
+  let currentYear = now.getFullYear();
+  let currentMonth = now.getMonth();
+
+  // populate year selector +/-5 years
+  function populateYears(centerYear = currentYear){
+    yearSelect.innerHTML = '';
+    for(let y = centerYear - 5; y <= centerYear + 5; y++){
+      const opt = document.createElement('option'); opt.value = y; opt.textContent = y;
+      if (y === centerYear) opt.selected = true;
+      yearSelect.appendChild(opt);
+    }
+  }
+  populateYears();
+
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+  function isoKey(d){ return d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()); }
+
+  // build 42 cell stable array for the month
+  function buildCells(year, month){
+    const first = new Date(year, month, 1);
+    const firstDow = first.getDay();
+    const daysInMonth = new Date(year, month+1, 0).getDate();
+    const lastPrev = new Date(year, month, 0).getDate();
+    const total = 42;
+    const cells = [];
+    for(let i=0;i<total;i++){
+      const dayNumber = i - firstDow + 1;
+      if (i < firstDow){
+        const d = lastPrev - (firstDow -1 - i);
+        cells.push({ type:'prev', display:d, date: new Date(year, month-1, d) });
+      } else if (dayNumber <= daysInMonth){
+        cells.push({ type:'current', display:dayNumber, date: new Date(year, month, dayNumber) });
+      } else {
+        const d = dayNumber - daysInMonth;
+        cells.push({ type:'next', display:d, date: new Date(year, month+1, d) });
+      }
+    }
+    return cells;
+  }
+
+  // compute 2nd & 4th Saturday numbers
+  function specialSaturdays(year, month){
+    const sats = [];
+    const dim = new Date(year, month+1, 0).getDate();
+    for(let d=1; d<=dim; d++) if (new Date(year, month, d).getDay() === 6) sats.push(d);
+    const special = [];
+    if (sats.length >= 2) special.push(sats[1]);
+    if (sats.length >= 4) special.push(sats[3]);
+    return special;
+  }
+
+  // build Map from events array (date ISO -> [events])
+  function buildEventsMap(arr){
+    const map = new Map();
+    if (!Array.isArray(arr)) return map;
+    arr.forEach(ev => {
+      if (!ev) return;
+      let iso = null;
+      if (ev.date instanceof Date) iso = isoKey(ev.date);
+      else if (typeof ev.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(ev.date)) iso = ev.date;
+      else {
+        // try parsing
+        const parsed = new Date(ev.date);
+        if (!isNaN(parsed)) iso = isoKey(parsed);
+      }
+      if (!iso) return;
+      if (!map.has(iso)) map.set(iso, []);
+      map.get(iso).push(ev);
+    });
+    return map;
+  }
+
+function render(year, month, eventsMap) {
+  grid.innerHTML = '';
+  const cells = buildCells(year, month);
+  const specialSats = specialSaturdays(year, month);
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  cells.forEach(c => {
+    const el = document.createElement('div');
+    el.className = 'day-cell';
+
+    // Highlight today (lavender for full cell)
+    const today = new Date();
+    if (c.date.getDate() === today.getDate() &&
+        c.date.getMonth() === today.getMonth() &&
+        c.date.getFullYear() === today.getFullYear()) {
+      el.classList.add('today-lavender');
+    }
+
+    // Highlight event days
+    const thisDate = `${c.date.getFullYear()}-${String(c.date.getMonth() + 1).padStart(2, '0')}-${String(c.date.getDate()).padStart(2, '0')}`;
+    if (eventsMap[thisDate]) {
+      el.classList.add('event-day');
+    }
+
+    if (c.type !== 'current') el.classList.add('empty');
+
+    const dateWrap = document.createElement('div');
+    dateWrap.className = 'date-number';
+    if (c.type !== 'current') dateWrap.classList.add('muted');
+    dateWrap.textContent = c.display;
+    el.appendChild(dateWrap);
+
+    const dow = c.date.getDay();
+    if (dow === 0) el.classList.add('sun');
+    if (dow === 6 && c.type === 'current' && specialSats.includes(c.display)) el.classList.add('sat-blue');
+
+    // Event coloring
+    if (eventsMap && c.date) {
+      const key = isoKey(c.date);
+      const evs = eventsMap.get(key);
+      if (evs && evs.length) {
+        const firstEvent = evs[0];
+        if (firstEvent.type === 'festival') {
+          el.classList.add('festival-day');
+        }
+        if (firstEvent.type === 'holiday' || firstEvent.type === 'national') {
+          el.classList.add('holiday-day');
+        }
+      }
+    }
+
+    grid.appendChild(el);
+  });
+
+  monthTitle.textContent = `${monthNames[month]} ${year}`;
+  const stats = computeSidebarStats(year, month, eventsMap, daysInMonth);
+  renderSidebar(stats);
+}
+
+  function computeSidebarStats(year, month, eventsMap, daysInMonth){
+    let festivals = 0, holidays = 0;
+    const eventsThisMonth = [];
+    for (let d=1; d<=daysInMonth; d++){
+      const iso = `${year}-${pad(month+1)}-${pad(d)}`;
+      const evs = eventsMap.get(iso);
+      if (evs && evs.length){
+        evs.forEach(e => {
+          if (e.type === 'holiday') holidays++;
+          else festivals++;
+          eventsThisMonth.push({ date: iso, name: e.name, overview: e.overview || '' });
+        });
+      }
+    }
+    let weekends = 0;
+    for (let d=1; d<=daysInMonth; d++){
+      const dow = new Date(year, month, d).getDay();
+      if (dow === 0 || dow === 6) weekends++;
+    }
+    eventsThisMonth.sort((a,b) => a.date > b.date ? 1 : -1);
+    return { festivals, holidays, weekends, total: festivals + holidays + weekends, upcoming: eventsThisMonth.slice(0,5) };
+  }
+
+  function renderSidebar(stats){
+    countFestivals.textContent = stats.festivals;
+    countHolidays.textContent = stats.holidays;
+    countWeekends.textContent = stats.weekends;
+    totalThisMonth.textContent = stats.total;
+
+    upcomingList.innerHTML = '';
+    if (!stats.upcoming || !stats.upcoming.length){
+      upcomingList.innerHTML = '<div style="padding:12px;color:#6b7280;">No events this month.</div>';
+      return;
+    }
+    stats.upcoming.forEach(ev => {
+      const item = document.createElement('div'); item.className = 'event-item';
+      const left = document.createElement('div'); left.className = 'event-date'; left.textContent = ev.date;
+      const right = document.createElement('div'); right.style.flex='1';
+      const name = document.createElement('div'); name.className = 'event-name'; name.textContent = ev.name;
+      const desc = document.createElement('div'); desc.className = 'event-desc'; desc.textContent = ev.overview || '';
+      right.appendChild(name); if (ev.overview) right.appendChild(desc);
+      item.appendChild(left); item.appendChild(right);
+      upcomingList.appendChild(item);
+    });
+  }
+
+  // fetch data from backend and render
+  function loadAndRender(){
+    fetch('/api/festivals').then(r => {
+      if (!r.ok) throw new Error('API fetch failed');
+      return r.json();
+    }).then(payload => {
+      const arr = Array.isArray(payload) ? payload : (payload.festivals || []);
+      // Normalize some entries: ensure date strings are YYYY-MM-DD
+      const normalized = arr.map(x => {
+        if (!x) return null;
+        // if d has date already good
+        if (typeof x.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(x.date)) return x;
+        // fallback: try parsing first date-like field
+        if (x.date && typeof x.date === 'string') {
+          const parsed = new Date(x.date);
+          if (!isNaN(parsed)) {
+            return Object.assign({}, x, { date: parsed.getFullYear() + '-' + pad(parsed.getMonth()+1) + '-' + pad(parsed.getDate()) });
+          }
+        }
+        return x;
+      }).filter(Boolean);
+
+      const eventsMap = buildEventsMap(normalized);
+      render(currentYear, currentMonth, eventsMap);
+    }).catch(err => {
+      console.warn('Could not fetch /api/festivals - showing no events', err);
+      // Try empty eventsMap
+      render(currentYear, currentMonth, new Map());
+    });
+  }
+
+  // nav handlers
+  prevBtn.addEventListener('click', () => { currentMonth--; if (currentMonth < 0) { currentMonth = 11; currentYear--; populateYears(currentYear);} loadAndRender(); });
+  nextBtn.addEventListener('click', () => { currentMonth++; if (currentMonth > 11) { currentMonth = 0; currentYear++; populateYears(currentYear);} loadAndRender(); });
+  yearSelect.addEventListener('change', e => { currentYear = Number(e.target.value); loadAndRender(); });
+
+  document.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') prevBtn.click(); if (e.key === 'ArrowRight') nextBtn.click(); });
+
+  // initial render
+  loadAndRender();
+
+})();
+
+function renderStates() {
+  const container = document.getElementById('states-container');
+  container.innerHTML = ''; // Clear previous content if any
+
+  states.forEach(state => {
+    const card = document.createElement('div');
+    card.className = 'state-card';
+    card.onclick = () => loadStateFestivals(state.name); // ✅ works for every state
+
+    card.innerHTML = `
+      <img src="${state.image}" alt="${state.name}">
+      <h3>${state.name}</h3>
+      <p>${state.capital}</p>
+    `;
+
+    container.appendChild(card);
+  });
+}
+// Handle festival card fade and transition to states
+document.addEventListener("DOMContentLoaded", () => {
+  const festCard = document.getElementById("festivalCard");
+  const statesView = document.getElementById("stateSelectionView");
+
+  // Hide states section initially
+  statesView.style.display = "none";
+
+  festCard.addEventListener("click", () => {
+    festCard.classList.add("fade-out");
+    setTimeout(() => {
+      festCard.style.display = "none";
+      statesView.style.display = "block";
+    }, 800); // match fade duration
+  });
+});
+
+//Historical Places Part
+(function() {
+      // --- config / fallbacks ---
+      const defaultPlaces = [
+        "Taj Mahal",
+        "Red Fort",
+        "Qutub Minar",
+        "Hampi",
+        "Konark Sun Temple",
+        "Charminar",
+        "Ajanta Caves",
+        "Fatehpur Sikri"
+      ];
+
+      // DOM
+      const mainCard = document.getElementById('heritage_localMainCard');
+      const cardsEl = document.getElementById('heritage_cards');
+      const detailsEl = document.getElementById('heritage_details');
+      const backToCardsBtn = document.getElementById('heritage_back_to_cards');
+      const heroImg = document.getElementById('heritage_hero_img');
+      const titleEl = document.getElementById('heritage_title');
+      const descEl = document.getElementById('heritage_description');
+      const highlightsEl = document.getElementById('heritage_highlights');
+      const wikiLink = document.getElementById('heritage_wiki_link');
+
+      // Use your loaded heritageArticleTitles if available (loadHeritageData sets it earlier), otherwise fallback.
+      const placesList = (window.heritageArticleTitles && window.heritageArticleTitles.length) ? window.heritageArticleTitles : defaultPlaces;
+
+      // Helper: fetch wiki summary (REST summary)
+      async function fetchWikiSummary(title) {
+        try {
+          const res = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
+          if (!res.ok) return null;
+          return await res.json();
+        } catch (e) { console.warn('wiki summary failed', e); return null; }
+      }
+
+      // Build a uniform card element
+      function makeCard(item, summary) {
+        const c = document.createElement('div');
+        c.className = 'heritage-card';
+        const imgHtml = summary && summary.thumbnail ? `<img src="${summary.thumbnail.source}" alt="${escapeHtml(item)}" loading="lazy">` :
+                        `<div style="width:100%;height:180px;background:linear-gradient(180deg,#f3f4f6,#ffffff);display:flex;align-items:center;justify-content:center;font-size:44px">🏛️</div>`;
+        const region = (window.placeRegions && window.placeRegions[item]) ? window.placeRegions[item] : '';
+        c.innerHTML = `
+          ${imgHtml}
+          <div class="card-body">
+            <h3 style="font-weight:700;margin-bottom:6px">${escapeHtml(item)}</h3>
+            <div style="color:#6b7280;font-size:13px;margin-bottom:6px">${escapeHtml(region)}</div>
+            <div style="font-size:13px;color:#374151;line-height:1.4;max-height:64px;overflow:hidden">${escapeHtml(summary?.extract || '')}</div>
+          </div>
+        `;
+        c.addEventListener('click', () => openDetail(item, summary));
+        return c;
+      }
+
+      // open details (fill and show)
+      async function openDetail(title, maybeSummary) {
+        showPage('heritagePage'); // ensure page visible and animated with your common handler
+        // ensure cards hidden
+        cardsEl.classList.add('hidden-el');
+
+        const summary = maybeSummary || await fetchWikiSummary(title);
+
+        heroImg.src = (summary && summary.thumbnail) ? summary.thumbnail.source : 'https://via.placeholder.com/1200x600?text=Image';
+        titleEl.textContent = title;
+        descEl.textContent = summary?.extract || 'No description available.';
+        highlightsEl.innerHTML = '';
+        // basic highlights
+        const descLabel = document.createElement('div'); descLabel.className = 'heritage-chip'; descLabel.textContent = summary?.description || 'Historical place';
+        highlightsEl.appendChild(descLabel);
+
+        wikiLink.href = `https://en.wikipedia.org/wiki/${encodeURIComponent(title)}`;
+
+        // show details with your page animations
+        detailsEl.classList.remove('hidden-el');
+        // add "show" class to animate opacity/transform
+        setTimeout(() => detailsEl.classList.add('show'), 20);
+      }
+
+      // initial show: when mainCard clicked, show cards list
+      mainCard.addEventListener('click', async () => {
+        // Show the heritagePage via global showPage to keep site transitions consistent
+        showPage('heritagePage');
+
+        // hide the single main card visual (it is inside this page)
+        mainCard.classList.add('hidden-el');
+
+        // populate cards (clear first)
+        cardsEl.innerHTML = '';
+        cardsEl.classList.remove('hidden-el');
+
+        // load summaries in parallel but render as they arrive for speed
+        const promises = placesList.map(async title => {
+          const summary = await fetchWikiSummary(title);
+          const card = makeCard(title, summary);
+          cardsEl.appendChild(card);
+        });
+
+        // once appended, show grid visually
+        setTimeout(() => cardsEl.classList.add('show'), 40);
+        await Promise.allSettled(promises);
+      });
+
+      // Back-to-cards button
+      backToCardsBtn.addEventListener('click', () => {
+        // hide details
+        detailsEl.classList.remove('show');
+        setTimeout(() => {
+          detailsEl.classList.add('hidden-el');
+          // show cards again
+          cardsEl.classList.remove('hidden-el');
+          setTimeout(() => cardsEl.classList.add('show'), 20);
+        }, 300);
+      });
+
+      // Utility
+      function escapeHtml(s) {
+        if (!s) return '';
+        return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+      }
+
+      // Expose an API so the existing homepage card handler (showPlacesGrid) still works if called elsewhere.
+      window.heritageUI = {
+        openList: async function() {
+          // same behaviour as mainCard click — useful if showPlacesGrid() calls this
+          mainCard.click();
+        },
+        openPlace: openDetail
+      };
+
+      // If existing showPlacesGrid() was used on the homepage, keep behavior consistent:
+      // We'll override showPlacesGrid if it exists so it opens our UI (safe: replaces old function).
+      window.showPlacesGrid = function() {
+        // call the new OpenList to show the page & cards
+        window.heritageUI.openList();
+      };
+
+      // If a function directToPlacesGrid exists that your template may call, map it too:
+      window.directToPlacesGrid = function() { window.heritageUI.openList(); };
+
+    })();
+  
+
+    // const heritageArticleTitles = [
+    //   'Taj Mahal',
+    //   'Charminar',
+    //   'Golconda Fort',
+    //   'Meenakshi Temple',
+    //   'Amer Fort'
+    // ];
+
+    // const placeRegions = {
+    //   'Taj Mahal': 'Agra, India',
+    //   'Charminar': 'Hyderabad, India',
+    //   'Golconda Fort': 'Hyderabad, India',
+    //   'Meenakshi Temple': 'Madurai, India',
+    //   'Amer Fort': 'Jaipur, India'
+    // };
+      let heritageArticleTitles = [];
+  let placeRegions = {};
+
+  async function loadHeritageData() {
+    const res = await fetch('\heritage.json');
+    const data = await res.json();
+    heritageArticleTitles = data.heritageArticleTitles;
+    placeRegions = data.placeRegions;
+  }
+
+  // Call once at page load
+  loadHeritageData();
+
+    // Fetch functions (unchanged)
+    async function fetchWikiSections(title) {
+      const url = `/api/places/info?title=${encodeURIComponent(title)}`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('Sections fetch failed: ' + res.status);
+      return await res.json();
+    }
+
+    async function fetchWikiMedia(title) {
+      const url = `/api/places/media?title=${encodeURIComponent(title)}`;
+      const res = await fetch(url);
+      if (!res.ok) return [];
+      return await res.json();
+    }
+
+    function stripScripts(html) {
+      return html.replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, '');
+    }
+
+    function createHeroCardForArticle(title, leadHtml, mediaArray) {
+      const card = document.createElement('div');
+      card.className = 'panel-heritage-card p-5';
+      const imgHtml = mediaArray.length ? `<div style="flex:0 0 140px"><img src="${mediaArray[0].src}" alt="${title}" loading="lazy" style="width:140px;height:96px;object-fit:cover;border-radius:8px"></div>` : '';
+      const safeLead = stripScripts(leadHtml || '');
+      card.innerHTML = `
+        <div class="flex items-start space-x-4">
+          ${imgHtml}
+          <div class="w-full">
+            <h3 class="text-lg font-semibold mb-1">${title}</h3>
+            <div class="text-sm text-gray-700 lead-html">${safeLead}</div>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    function createSectionCard(section) {
+      const card = document.createElement('div');
+      card.className = 'panel-heritage-card p-4';
+      const safe = stripScripts(section.text || '');
+      card.innerHTML = `
+        <div>
+          <h4 class="text-md font-semibold mb-2">${section.line || 'Section'}</h4>
+          <div class="text-sm section-html">${safe}</div>
+        </div>
+      `;
+      return card;
+    }
+
+    async function fetchAndRenderArticleCardsIntoContainer(title, containerEl) {
+      containerEl.innerHTML = `<div class="p-4 text-sm text-gray-600">Loading ${title} ...</div>`;
+      try {
+        const [sectionsBody, media] = await Promise.all([
+          fetchWikiSections(title),
+          fetchWikiMedia(title)
+        ]);
+        containerEl.innerHTML = '';
+
+        if (sectionsBody && sectionsBody.lead) {
+          const leadHtml = (sectionsBody.lead.sections || []).map(s => s.text).join('');
+          containerEl.appendChild(createHeroCardForArticle(title, leadHtml, media || []));
+        }
+
+        if (sectionsBody.sections && sectionsBody.sections.length) {
+          let count = 0;
+          for (const sec of sectionsBody.sections) {
+            if (!sec.text || sec.text.trim() === '') continue;
+            containerEl.appendChild(createSectionCard(sec));
+            if (++count >= 40) break;
+          }
+        }
+
+        if (!containerEl.children.length) {
+          containerEl.innerHTML = `<div class="p-4 text-sm text-gray-600">No content returned for ${title}.</div>`;
+        }
+      } catch (err) {
+        containerEl.innerHTML = `<div class="p-4 text-red-600">Error: ${err.message}</div>`;
+        console.error(err);
+      }
+    }
+
+    function createPlaceCard(title) {
+      const card = document.createElement('div');
+      card.className = 'heritage-card rounded-2xl p-6 text-center card-hover cursor-pointer';
+      card.onclick = () => showArticleForPlace(title);
+      const region = placeRegions[title] || 'Unknown Region';
+      card.innerHTML = `
+        <div class="text-5xl mb-4">🏛️</div>
+        <h3 class="text-xl font-bold mb-3">${title}</h3>
+        <p class="text-sm opacity-90">${region}</p>
+      `;
+      return card;
+    }
+function showPlacesGrid() {
+  // 🐛 FIX 1: Change 'mainGrid' to 'heritageCard' (the element to hide)
+  const main = document.getElementById('heritageCard'); 
+  const places = document.getElementById('placesGrid');
+
+  // Check if main element was found before trying to use its properties
+  if (!main) {
+      console.error('Element heritageCard not found, cannot start transition.');
+      places.classList.remove('hidden'); // Fallback to show grid immediately
+      return; 
+  }
+  
+  main.classList.add('hide-others');
+  main.style.transition = 'opacity .28s ease';
+  main.style.opacity = '0';
+  
+  setTimeout(() => {
+    main.classList.add('hidden-el'); // Use hidden-el for consistency
+    main.style.opacity = '';
+    
+    // 🐛 FIX 2: Change back button onclick from non-existent function to showPage('heritagePage')
+    places.innerHTML = '<div class="mb-4"><button class="px-4 py-2 rounded bg-gray-600 text-white" onclick="showPage(\'heritagePage\')">← Back to Heritage</button></div>'; 
+
+    heritageArticleTitles.forEach(title => {
+      places.appendChild(createPlaceCard(title));
+    });
+    
+    places.classList.remove('hidden');
+    places.classList.add('fade-enter');
+  }, 300);
+}
+function directToPlacesGrid() {
+  // Step 1: Use the existing showPage function to transition to the heritage section
+  showPage('heritagePage'); 
+
+  // Step 2: Immediately hide the intermediate card and show the places grid
+  const heritageCard = document.getElementById('heritageCard');
+  const placesGrid = document.getElementById('placesGrid');
+  
+  if (heritageCard) {
+    // Hide the intermediate card immediately
+    heritageCard.classList.add('hidden-el');
+    // Ensure the main container for the places grid is not hidden
+    placesGrid.classList.remove('hidden');
+    placesGrid.classList.add('fade-enter');
+  }
+
+  // Step 3: Populate the grid content (copied from the original showPlacesGrid logic)
+  if (placesGrid) {
+    // IMPORTANT: Changed back button to go to 'homePage'
+    placesGrid.innerHTML = '<div class="mb-4"><button class="px-4 py-2 rounded bg-gray-600 text-white" onclick="showPage(\'homePage\')">← Back to Home</button></div>'; 
+
+    // Re-generate cards using your existing createPlaceCard function
+    heritageArticleTitles.forEach(title => {
+      placesGrid.appendChild(createPlaceCard(title));
+    });
+  }
+}
+
+    function showArticleForPlace(title) {
+      const places = document.getElementById('placesGrid');
+      const article = document.getElementById('articleView');
+      const content = document.getElementById('articleContent');
+
+      places.classList.remove('visible');
+      setTimeout(() => {
+        places.classList.add('hidden');
+
+        article.classList.remove('hidden');
+        article.classList.add('visible');
+        fetchAndRenderArticleCardsIntoContainer(title, content);
+      }, 260);
+    }
+
+    function backToPlacesGrid() {
+      const article = document.getElementById('articleView');
+      const places = document.getElementById('placesGrid');
+
+      article.classList.remove('visible');
+      setTimeout(() => {
+        article.classList.add('hidden');
+
+        places.classList.remove('hidden');
+        places.classList.add('visible');
+      }, 260);
+    }
+
+    function backToHomepage() {
+      const places = document.getElementById('placesGrid');
+      const main = document.getElementById('mainGrid');
+
+      places.classList.remove('visible');
+      setTimeout(() => {
+        places.classList.add('hidden');
+
+        main.classList.remove('hidden');
+        main.style.opacity = '0';
+        setTimeout(() => {
+          main.style.transition = 'opacity .28s ease';
+          main.style.opacity = '1';
+          setTimeout(() => {
+            main.style.opacity = '';
+            main.classList.remove('hide-others');
+          }, 300);
+        }, 20);
+      }, 260);
+    }
+
+
+
+
+//FolkTales Part
+
+async function showFolkTales() {
+  showPage('folkTalesPage');
+  if (window._folktalesLoading || window._folktalesLoaded) return;
+  window._folktalesLoading = true;
+
+  const grid = document.getElementById('folkTalesGrid');
+  const loading = document.getElementById('folkLoading');
+  const err = document.getElementById('folkError');
+
+  grid.innerHTML = '';
+  err.classList.add('hidden');
+  loading.classList.remove('hidden');
+
+  try {
+    const urls = ['/api/folktales', 'FolkTales.json', './FolkTales.json'];
+    let data = null;
+    for (const u of urls) {
+      try {
+        const res = await fetch(u, { cache: 'no-store' });
+        if (!res.ok) continue;
+        data = await res.json();
+        break;
+      } catch (e) {}
+    }
+
+    loading.classList.add('hidden');
+    if (!data) {
+      err.classList.remove('hidden');
+      console.error('folktales: no data loaded.');
+      window._folktalesLoading = false;
+      return;
+    }
+
+    let tales = [];
+    if (Array.isArray(data)) tales = data;
+    else if (Array.isArray(data.folktales)) tales = data.folktales;
+    else if (Array.isArray(data.data)) tales = data.data;
+    else {
+      const maybe = Object.values(data).find(v => Array.isArray(v));
+      if (Array.isArray(maybe)) tales = maybe;
+    }
+
+    if (!tales.length) {
+      err.classList.remove('hidden');
+      console.warn('folktales: data invalid', data);
+      window._folktalesLoading = false;
+      return;
+    }
+
+    grid.innerHTML = '';
+    tales.forEach((t, i) => {
+      const icon = t.icon || t.emoji || '📖';
+      const title = t.title || `Tale ${i + 1}`;
+      const origin = t.origin || '';
+      const card = document.createElement('div');
+card.className = 'tale-card bg-orange-100 border border-orange-300 rounded-2xl p-5 cursor-pointer shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:bg-orange-200';
+card.dataset.index = i;
+
+card.innerHTML = `
+  <div class="text-4xl mb-3">${icon}</div>
+  <h4 class="text-lg font-semibold text-gray-800 mb-1">${escapeHtml(title)}</h4>
+  <div class="text-sm text-gray-600 italic">${escapeHtml(origin)}</div>
+`;
+
+      card.addEventListener('click', () => showTaleDetails(i, tales));
+      grid.appendChild(card);
+    });
+
+    window._folktales = tales;
+    window._folktalesLoaded = true;
+  } catch (err) {
+    loading.classList.add('hidden');
+    err.classList.remove('hidden');
+    console.error('Error loading folktales:', err);
+  } finally {
+    window._folktalesLoading = false;
+  }
+}
+function showTaleDetails(idx, arr) {
+  const tales = arr || window._folktales || [];
+  const t = tales[idx];
+  if (!t) return;
+
+  hideElement('folkTalesPage');
+  hideElement('homePage');
+  showElement('taleDetailsPage');
+
+  document.getElementById('taleIcon').textContent = t.icon || '📖';
+  document.getElementById('taleTitle').textContent = t.title || 'Untitled Tale';
+  document.getElementById('taleOrigin').textContent = t.origin || '';
+
+  const contentEl = document.getElementById('taleContent');
+  if (Array.isArray(t.content) && t.content.length > 0) {
+    contentEl.innerHTML = t.content.map(p => `<p>${escapeHtml(p)}</p>`).join('');
+  } else if (typeof t.content === 'string') {
+    contentEl.innerHTML = `<p>${escapeHtml(t.content)}</p>`;
+  } else {
+    contentEl.innerHTML = `<p>No story available.</p>`;
+  }
+
+  const moralEl = document.getElementById('taleMoral');
+  moralEl.textContent = t.moral ? `Moral: ${t.moral}` : '';
+}
+function backToFolkTales() {
+  hideElement('taleDetailsPage');
+  showElement('folkTalesPage');
+}
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, c => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[c]));
+}
+let _speech = window.speechSynthesis;
+let _utterance = null;
+let _voices = [];
+let _isPaused = false;
+
+// DOM refs
+const voiceSelect = document.getElementById('voiceSelect');
+const rateRange = document.getElementById('rateRange');
+const playBtn = document.getElementById('playBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+const resumeBtn = document.getElementById('resumeBtn');
+const stopBtn = document.getElementById('stopBtn');
+
+// load voices (cross-browser safe)
+function loadVoices() {
+  return new Promise(resolve => {
+    const got = () => {
+      _voices = _speech.getVoices().filter(v => v.lang && v.name);
+      // prefer en-IN then en
+      const sorted = _voices.slice().sort((a,b) => {
+        if (a.lang === 'en-IN' && b.lang !== 'en-IN') return -1;
+        if (b.lang === 'en-IN' && a.lang !== 'en-IN') return 1;
+        return a.name.localeCompare(b.name);
+      });
+      _voices = sorted;
+      populateVoiceSelect();
+      resolve(_voices);
+    };
+    // some browsers load voices asynchronously
+    const v = _speech.getVoices();
+    if (v && v.length) { got(); }
+    else { _speech.onvoiceschanged = got; }
+  });
+}
+
+// populate voice selector
+function populateVoiceSelect(){
+  if (!voiceSelect) return;
+  voiceSelect.innerHTML = '';
+  _voices.forEach((v, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = `${v.name} — ${v.lang}${v.localService ? ' (local)' : ''}`;
+    voiceSelect.appendChild(opt);
+  });
+  // sensible default: first en-IN, else first en-*, else first available
+  const idx = _voices.findIndex(v => v.lang === 'en-IN') || _voices.findIndex(v => v.lang && v.lang.startsWith('en')) || 0;
+  if (idx >= 0) voiceSelect.selectedIndex = idx;
+}
+
+// call early so voices are ready when user clicks
+loadVoices().catch(e => console.warn('Voice load failed', e));
+
+// Build readable text for the current tale
+function getCurrentTaleText() {
+  const title = document.getElementById('taleTitle')?.textContent?.trim() || '';
+  const origin = document.getElementById('taleOrigin')?.textContent?.trim() || '';
+  const paras = Array.from(document.querySelectorAll('#taleContent p')).map(p => p.textContent.trim()).join(' ');
+  const moral = document.getElementById('taleMoral')?.textContent?.trim() || '';
+  let text = title;
+  if (origin) text += `. A tale from ${origin}.`;
+  if (paras) text += ` ${paras}`;
+  if (moral) text += ` Moral of the story: ${moral}`;
+  return text;
+}
+
+// Start reading (must be triggered by user gesture)
+function readTaleAloud(){
+  // stop existing
+  stopReading();
+
+  const text = getCurrentTaleText();
+  if (!text || text.length < 10) {
+    alert('No story text available to read aloud.');
+    return;
+  }
+
+  // create utterance
+  _utterance = new SpeechSynthesisUtterance(text);
+  const sel = voiceSelect?.value;
+  if (typeof sel !== 'undefined' && _voices[Number(sel)]) {
+    _utterance.voice = _voices[Number(sel)];
+  } else if (_voices.length) {
+    _utterance.voice = _voices[0];
+  }
+  _utterance.rate = Number(rateRange?.value) || 1;
+  _utterance.pitch = 1;
+  _utterance.volume = 1;
+  _utterance.onstart = () => {
+    playBtn.setAttribute('aria-pressed','true');
+    pauseBtn.disabled = false;
+    stopBtn.disabled = false;
+    resumeBtn.disabled = true;
+    _isPaused = false;
+  };
+  _utterance.onend = () => {
+    playBtn.setAttribute('aria-pressed','false');
+    pauseBtn.disabled = true;
+    resumeBtn.disabled = true;
+    stopBtn.disabled = true;
+    _utterance = null;
+    _isPaused = false;
+  };
+  _utterance.onerror = (e) => {
+    console.error('Speech error', e);
+    stopReading();
+  };
+
+  try {
+    _speech.speak(_utterance);
+  } catch (err) {
+    console.error('Could not start speech:', err);
+    alert('Speech synthesis failed in this browser.');
+  }
+}
+
+function pauseReading(){
+  if (!_speech || !_utterance) return;
+  if (_speech.speaking && !_speech.paused) {
+    _speech.pause();
+    _isPaused = true;
+    pauseBtn.disabled = true;
+    resumeBtn.disabled = false;
+  }
+}
+
+function resumeReading(){
+  if (!_speech || !_utterance) return;
+  if (_speech.paused) {
+    _speech.resume();
+    _isPaused = false;
+    pauseBtn.disabled = false;
+    resumeBtn.disabled = true;
+  }
+}
+
+function stopReading(){
+  if (!_speech) return;
+  try {
+    _speech.cancel();
+  } catch(e){}
+  _utterance = null;
+  _isPaused = false;
+  if (playBtn) playBtn.setAttribute('aria-pressed','false');
+  if (pauseBtn) pauseBtn.disabled = true;
+  if (resumeBtn) resumeBtn.disabled = true;
+  if (stopBtn) stopBtn.disabled = true;
+}
+
+// update rate live while speaking (will take effect next utterance)
+rateRange?.addEventListener('input', () => {
+  rateRange.title = 'Rate: ' + rateRange.value;
+});
+
+// Stop speech if user navigates away or clicks elsewhere in the app
+window.addEventListener('beforeunload', stopReading);
+document.addEventListener('visibilitychange', () => { if (document.hidden) stopReading(); });
+function showElement(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.remove('hidden-el'); // remove display:none first
+  el.style.display = 'block';       // ensure visible
+  el.classList.add('fade-enter');
+  el.classList.remove('fade-leave');
+}
+
+
+function hideElement(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.remove('fade-enter');
+  el.classList.add('fade-leave');
+  setTimeout(() => {
+    el.classList.add('hidden-el');
+    el.classList.remove('fade-leave');
+  }, 300);
+}
+
+window.currentUser = null;
+let authMode = 'login'; // or 'signup'
+
+function openAuthModal() {
+  if (window.currentUser) {
+    window.location.href = "quiz.html"; // redirect if already logged in
+  } else {
+    const m = document.getElementById('authModal');
+    m.classList.remove('hidden-el');
+    m.classList.add('fade-enter');
+  }
+}
+
+function closeAuthModal() {
+  const m = document.getElementById('authModal');
+  if (!m) return;
+  m.classList.remove('fade-enter');
+  m.classList.add('fade-leave');
+  setTimeout(()=> { m.classList.add('hidden-el'); m.classList.remove('fade-leave'); }, 260);
+}
+
+function toggleAuthMode(e) {
+  if (e) e.preventDefault();
+  authMode = authMode === 'login' ? 'signup' : 'login';
+  document.getElementById('authTitle').textContent = authMode === 'login' ? 'Login to Start Quiz' : 'Create an Account';
+  document.getElementById('submitButton').textContent = authMode === 'login' ? 'Login' : 'Sign up';
+  // update toggle link text
+  const t = document.getElementById('toggleAuth');
+  if (t) t.textContent = authMode === 'login' ? 'Create an Account' : 'Already have an account? Login';
+}
+
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('section');
+  sections.forEach(sec => {
+    if (sec.id === sectionId) {
+      sec.classList.remove('hidden-el', 'fade-leave');
+      sec.classList.add('fade-enter');
+    } else {
+      sec.classList.remove('fade-enter');
+      sec.classList.add('fade-leave');
+      setTimeout(() => sec.classList.add('hidden-el'), 300);
+    }
+  });
+}
+
+//Arts and Craft Part
+function showArtsPage() {
+  showPage('artsPage');
+  loadArts();
+}
+async function loadArts() {
+  const grid = document.getElementById("artsGrid");
+  const loading = document.getElementById("artsLoading");
+  const error = document.getElementById("artsError");
+
+  grid.innerHTML = "";
+  loading.classList.remove("hidden");
+  error.classList.add("hidden");
+
+  try {
+    const res = await fetch("/api/arts");
+    if (!res.ok) throw new Error("Failed loading arts");
+
+    const arts = await res.json();
+    loading.classList.add("hidden");
+
+    arts.forEach(a => {
+      const card = document.createElement("div");
+      card.className =
+        "p-4 bg-white rounded-xl shadow-lg cursor-pointer fade-enter";
+      card.style.width = "280px";
+
+      card.innerHTML = `
+        <img src="${a.image}" class="w-full h-40 rounded-md object-cover mb-3" />
+        <h3 class="font-bold text-lg">${a.emoji} ${a.title}</h3>
+        <p class="text-sm text-gray-700 mt-1">${a.short}</p>
+      `;
+
+      card.onclick = () => showArtsDetails(a);
+      grid.appendChild(card);
+    });
+
+  } catch (err) {
+    loading.classList.add("hidden");
+    error.classList.remove("hidden");
+    console.error(err);
+  }
+}
+function showArtsDetails(art) {
+  // Fill content
+  document.getElementById("artsDetailEmoji").textContent = art.emoji;
+  document.getElementById("artsDetailTitle").textContent = art.title;
+  document.getElementById("artsDetailImage").src = art.image;
+  document.getElementById("artsDetailShort").textContent = art.short;
+
+  const stepsList = document.getElementById("artsStepsList");
+  stepsList.innerHTML = "";
+  art.steps.forEach(step => {
+    const li = document.createElement("li");
+    li.textContent = step;
+    stepsList.appendChild(li);
+  });
+
+  document.getElementById("artsDetailVideo").src =
+    art.video.replace("watch?v=", "embed/");
+
+  // Fade transition
+  showPage("artsDetailsPage");
+}
+
+function backToArts() {
+  showPage("artsPage");
+}
+
+/* ---------- Quiz submission & leaderboard helpers ---------- */
+
+async function submitScore(score, quizName = 'default') {
+  if (!window.currentUser || !window.currentUser.id) return alert('You must be logged in to submit a score.');
+  try {
+    const res = await fetch('/api/quiz/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: window.currentUser.id, score: Number(score), quiz_name: quizName })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'submit failed');
+    return data;
+  } catch (err) {
+    console.error('submitScore error', err);
+    throw err;
+  }
+}
+
+async function getLeaderboard(quizName = 'default', limit = 10) {
+  try {
+    const res = await fetch(`/api/quiz/leaderboard?quiz_name=${encodeURIComponent(quizName)}&limit=${limit}`);
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'leaderboard failed');
+    return data.leaderboard;
+  } catch (err) {
+    console.error('getLeaderboard error', err);
+    return [];
+  }
+}
+
+/* Optional small UI: show a simple leaderboard in a modal or console */
+async function showLeaderboard(quizName = 'default') {
+  const rows = await getLeaderboard(quizName, 10);
+  if (!rows || !rows.length) return alert('No scores yet.');
+  let html = '<ol style="text-align:left;">';
+  rows.forEach(r => {
+    const name = r.display_name || r.username || ('user' + r.user_id);
+    html += `<li>${name} — ${r.score} pts (${new Date(r.created_at).toLocaleString()})</li>`;
+  });
+  html += '</ol>';
+  // quick alert for prototype (replace with a nicer modal/UI)
+  const w = window.open('', 'leaderboard', 'width=460,height=380');
+  w.document.write('<h3>Leaderboard</h3>' + html);
+}
+function startQuiz() {
+  // quick prototype: ask 3 questions, compute score
+  const questions = [
+    { q: 'What city is the Taj Mahal in?', a: 'Agra' },
+    { q: 'Which festival is a harvest festival in Tamil Nadu?', a: 'Pongal' },
+    { q: 'What is the capital of Kerala?', a: 'Thiruvananthapuram' }
+  ];
+  let score = 0;
+  for (const item of questions) {
+    const ans = prompt(item.q);
+    if (!ans) continue;
+    if (ans.trim().toLowerCase() === item.a.toLowerCase()) score += 10;
+  }
+  alert('Quiz finished. You scored: ' + score);
+  // submit result
+  submitScore(score, 'heritage_quiz').then(()=> {
+    alert('Score submitted — opening leaderboard');
+    showLeaderboard('heritage_quiz');
+  }).catch(err => alert('Could not submit score: ' + err.message));
+}
+
+
+function goToQuiz() {
+  window.location.href = "/quiz"; // or "/quiz.html" depending on your setup
+}
+
+
+
+</script>
+</body>
+</html>
+

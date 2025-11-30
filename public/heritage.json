@@ -1,0 +1,107 @@
+{
+  "heritageArticleTitles": [
+    "Taj Mahal",
+    "Agra Fort",
+    "Fatehpur Sikri",
+    "Qutub Minar",
+    "Red Fort",
+    "Humayun's Tomb",
+    "Lotus Temple",
+    "India Gate",
+    "Charminar",
+    "Golconda Fort",
+    "Chowmahalla Palace",
+    "Ramoji Film City",
+    "Meenakshi Temple",
+    "Brihadeeswara Temple",
+    "Rameswaram Ramanathaswamy Temple",
+    "Hampi",
+    "Badami Caves",
+    "Belur Chennakeshava Temple",
+    "Shravanabelagola",
+    "Amer Fort",
+    "City Palace Jaipur",
+    "Hawa Mahal",
+    "Jantar Mantar Jaipur",
+    "Jaisalmer Fort",
+    "Mehrangarh Fort",
+    "Udaipur City Palace",
+    "Ajanta Caves",
+    "Ellora Caves",
+    "Gateway of India",
+    "Chhatrapati Shivaji Terminus",
+    "Konark Sun Temple",
+    "Jagannath Temple",
+    "Khajuraho Temples",
+    "Sanchi Stupa",
+    "Mahabalipuram Shore Temple",
+    "Kaziranga National Park",
+    "Victoria Memorial",
+    "Howrah Bridge",
+    "Nalanda University Ruins",
+    "Gol Ghar",
+    "Golden Temple",
+    "Jallianwala Bagh",
+    "Sun Temple Modhera",
+    "Rani ki Vav"
+  ],
+
+  "placeRegions": {
+    "Taj Mahal": "Agra, Uttar Pradesh",
+    "Agra Fort": "Agra, Uttar Pradesh",
+    "Fatehpur Sikri": "Agra, Uttar Pradesh",
+    "Qutub Minar": "Delhi",
+    "Red Fort": "Delhi",
+    "Humayun's Tomb": "Delhi",
+    "Lotus Temple": "Delhi",
+    "India Gate": "Delhi",
+
+    "Charminar": "Hyderabad, Telangana",
+    "Golconda Fort": "Hyderabad, Telangana",
+    "Chowmahalla Palace": "Hyderabad, Telangana",
+    "Ramoji Film City": "Hyderabad, Telangana",
+
+    "Meenakshi Temple": "Madurai, Tamil Nadu",
+    "Brihadeeswara Temple": "Thanjavur, Tamil Nadu",
+    "Rameswaram Ramanathaswamy Temple": "Rameswaram, Tamil Nadu",
+
+    "Hampi": "Bellary, Karnataka",
+    "Badami Caves": "Badami, Karnataka",
+    "Belur Chennakeshava Temple": "Hassan, Karnataka",
+    "Shravanabelagola": "Hassan, Karnataka",
+
+    "Amer Fort": "Jaipur, Rajasthan",
+    "City Palace Jaipur": "Jaipur, Rajasthan",
+    "Hawa Mahal": "Jaipur, Rajasthan",
+    "Jantar Mantar Jaipur": "Jaipur, Rajasthan",
+    "Jaisalmer Fort": "Jaisalmer, Rajasthan",
+    "Mehrangarh Fort": "Jodhpur, Rajasthan",
+    "Udaipur City Palace": "Udaipur, Rajasthan",
+
+    "Ajanta Caves": "Aurangabad, Maharashtra",
+    "Ellora Caves": "Aurangabad, Maharashtra",
+    "Gateway of India": "Mumbai, Maharashtra",
+    "Chhatrapati Shivaji Terminus": "Mumbai, Maharashtra",
+
+    "Konark Sun Temple": "Konark, Odisha",
+    "Jagannath Temple": "Puri, Odisha",
+
+    "Khajuraho Temples": "Chhatarpur, Madhya Pradesh",
+    "Sanchi Stupa": "Sanchi, Madhya Pradesh",
+
+    "Mahabalipuram Shore Temple": "Mahabalipuram, Tamil Nadu",
+
+    "Kaziranga National Park": "Assam",
+    "Victoria Memorial": "Kolkata, West Bengal",
+    "Howrah Bridge": "Kolkata, West Bengal",
+
+    "Nalanda University Ruins": "Nalanda, Bihar",
+    "Gol Ghar": "Patna, Bihar",
+
+    "Golden Temple": "Amritsar, Punjab",
+    "Jallianwala Bagh": "Amritsar, Punjab",
+
+    "Sun Temple Modhera": "Mehsana, Gujarat",
+    "Rani ki Vav": "Patan, Gujarat"
+  }
+}
